@@ -9,8 +9,7 @@ hostname=*.mlinkapp.cc
 var body = $response.body; 
 var obj = JSON.parse(body); 
 // 修改数据字段
-obj.data.username = "YaHee, Studio.";
 obj.data.level = "3";
-obj.data.freeTime = "659200000";
+obj.data.freeTime = 666600000;
 // 重写响应体
 $done({ body: JSON.stringify(obj) });
