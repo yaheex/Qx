@@ -10,7 +10,6 @@ var body = $response.body;
 var obj = JSON.parse(body); 
 // 修改数据字段
 obj.data.level = "3";
-obj.data.expireTime = "6666666666666";
-obj.data.freeTime = "666666666";
+obj.data.agentNum = "5";
 // 重写响应体
 $done({ body: JSON.stringify(obj) });
