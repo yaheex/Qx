@@ -4,6 +4,8 @@
 # 下载：https://apps.apple.com/cn/app/id1495140048
 # 兔小贝拼音 解锁会员
 # 下载：https://apps.apple.com/cn/app/id1321808354
+# 兔小贝数学 解锁会员
+# 下载：https://apps.apple.com/cn/app/id1524576787
 **************************************
  [rewrite_local]
 
