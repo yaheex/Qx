@@ -1,7 +1,7 @@
 /************************************
 [rewrite_local]
 
-^https:\/\/.*\.(intsig\.net|camscanner\.com) url script-response-body https://raw.githubusercontent.com/yahee/Rewrite/main/CamScanner.js
+^https:\/\/.*\.(intsig\.net|camscanner\.com) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/smqnw.js
 
 [mitm]
 
