@@ -6,7 +6,7 @@
 ***********************************/
 // 重写路径
 [rewrite_local]
-https?:\/\/.*\.mlinkapp\.cc\/v1\/user url script-response-body https://raw.githubusercontent.com/yaheex/test/main/vip.js
+https?:\/\/.*\.mlinkapp\.cc\/v1\/user url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/miaolian.js
 // 重写网站
 hostname=*.mlinkapp.cc
 ***********************************/
