@@ -16,7 +16,7 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/mtxxqjt.js
+^https?:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/mtxxqjt.js
 
 [mitm]
 hostname = api-*.meitu.com
