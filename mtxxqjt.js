@@ -29,24 +29,24 @@ const vip = '/user/vip_info';
 const user = '/user/show';
 
 if ($request.url.indexOf(vip) != -1){
-yahee。data.trial_period_invalid_time = 4092599349000;
-yahee。data.current_order_invalid_time = 4092599349000;
-yahee。data.valid_time = 4092599349000;
-yahee。data.invalid_time = 4092599349000;
-yahee。data.use_vip = true;
-yahee。data.have_valid_contract = true;
-yahee。data.derive_type_name = "普通会员";
-yahee。data.in_trial_period = true;
-yahee。data.is_vip = true;
+yahee.data.trial_period_invalid_time = 4092599349000;
+yahee.data.current_order_invalid_time = 4092599349000;
+yahee.data.valid_time = 4092599349000;
+yahee.data.invalid_time = 4092599349000;
+yahee.data.use_vip = true;
+yahee.data.have_valid_contract = true;
+yahee.data.derive_type_name = "普通会员";
+yahee.data.in_trial_period = true;
+yahee.data.is_vip = true;
 }
 
 if ($request.url.indexOf(user) != -1){
-yahee。data.vip_type = 1;
-yahee。data.vip_icon = "https://xximg1.meitudata.com/6948531818264286440.png";
-yahee。data.follower_count = 999000;
-yahee。data.fan_count = 999000;
-yahee。data.favorites_count = 999000;
-yahee。data.be_like_count = 999000;
+yahee.data.vip_type = 1;
+yahee.data.vip_icon = "https://xximg1.meitudata.com/6948531818264286440.png";
+yahee.data.follower_count = 999000;
+yahee.data.fan_count = 999000;
+yahee.data.favorites_count = 999000;
+yahee.data.be_like_count = 999000;
 }
 
 $done({body : JSON.stringify(yahee)});
