@@ -1,14 +1,13 @@
 /*************************************
 项目名称：WPS Office
 下载地址：https://t.cn/A6KOhd30
-
 **************************************
 
 [rewrite_local]
-^https?:\/\/(vas|account|drive)\.wps\.cn\/(query\/api\/.+\/list_purchase_info|api\/(v\d\/spaces|users\/.+\/overview)) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/WPS.js
+^https?:\/\/(vas|account|drive)\.wps\.cn\/(query\/api\/.+\/list_purchase_info|api\/(v\d\/spaces|users\/.+\/overview)) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/wps.js
 
 [mitm]
-hostname = *.wps.cn
+hostname = *.wps.cn
 
 *************************************/
 

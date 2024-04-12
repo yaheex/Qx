@@ -7,7 +7,7 @@
 
 [rewrite_local]
 
-^https:\/\/api-v3\.speedtest\.cn\/user\/info url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/yahee/wsgj.js
+^https:\/\/api-v3\.speedtest\.cn\/user\/info url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/wsgj.js
 
 [mitm]
 
