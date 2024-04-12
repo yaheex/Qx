@@ -3,7 +3,7 @@ BodyOk 4.1.9
 间歇性断食追踪
 
 [rewrite_local]
-^https:\/\/api\.apphud\.com\/v1\/(subscriptions|customers)$ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/bodyok.js
+^https:\/\/api\.apphud\.com\/v1\/(subscriptions|customers)$ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/bodyok1.js
 
 [mitm]
 hostname = api.apphud.com
