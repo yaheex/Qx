@@ -6,7 +6,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/jz\.wacaijizhang\.com\/(api\/(my\/v\d|vipmember\/v\d\/index|usercenter\/userInfo)|jz-activity\/bkk-frontier\/api\/vipmember\/v\d\/index) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/wacaijizhang.js
+^https?:\/\/jz\.wacaijizhang\.com\/(api\/(my\/v\d|vipmember\/v\d\/index|usercenter\/userInfo)|jz-activity\/bkk-frontier\/api\/vipmember\/v\d\/index) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/yahee/wacaijizhang.js
 
 [mitm]
 hostname = jz.wacaijizhang.com
@@ -20,7 +20,7 @@ const user = /usercenter\/userInfo/;
 
 if(my.test($request.url)){
   yahee.data.vipInfo = {
-    "vipMemberType" : "挖财记账超牛逼会员",
+    "vipMemberType" : "挖财记账超级年会员",
     "isVipMember" : true,
     "expirationDate" : 4092599349000,
     "continuous" : true,
