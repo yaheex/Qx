@@ -6,36 +6,50 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/jz\.wacai\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/wacaijizhang.js
+^https?:\/\/jz\.wacaijizhang\.com\/(api\/(my\/v\d|vipmember\/v\d\/index|usercenter\/userInfo)|jz-activity\/bkk-frontier\/api\/vipmember\/v\d\/index) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/wacaijizhang.js
 
 [mitm]
-hostname = jz.wacai.com
+hostname = jz.wacaijizhang.com
 
 *************************************/
 
+var yahee = JSON.parse($response.body);
+const my = /api\/my\/v\d/;
+const vip = /(vipmember\/v\d\/index|jz-activity\/bkk-frontier\/api\/vipmember\/v\d\/index)/;
+const user = /usercenter\/userInfo/;
 
-var body = $response.body;
+if(my.test($request.url)){
+  yahee.data.vipInfo = {
+    "vipMemberType" : "挖财记账超牛逼会员",
+    "isVipMember" : true,
+    "expirationDate" : 4092599349000,
+    "continuous" : true,
+    "remainingDays" : 99999,
+    "consecutiveDays" : 99999
+  };
+}
 
-body = body.replace(/\"isVip":\d+/g, '\"isVip":1');
+if(vip.test($request.url)){
+  yahee.data.vipInfo = {
+    ...yahee.data.vipInfo,
+    "adFreeVipEnable" : 1,
+    "adFreePermanentVip" : true,
+    "vipMemberEnable" : 1,
+    "continuousEnable" : 1,
+    "continuousType" : 1,
+    "expirationDate" : 4092599349000,
+    "superExpireDate" : 4092599349000,
+    "adFreeExpireDate" : 4092599349000,
+    "isPermanentVip" : true,
+    "freeSendAdFreeVipEnable" : 0,
+    "vipType" : 2,
+    "expireDaysDays" : 99999,
+    "freeSendVipEnable" : 0
+  };
+}
 
-body = body.replace(/\"sex":"\d+"/g, '\"sex":"1"');
+if(user.test($request.url)){
+  yahee.data.isVip = 1;
+}
 
-body = body.replace(/\"isPermanentVip":\w+/g, '\"isPermanentVip":true');
-
-body = body.replace(/\"freeSendVipEnable":\d+/g, '\"freeSendVipEnable":1');
-
-body = body.replace(/\"freeSendAdFreeVipEnable":\d+/g, '\"freeSendAdFreeVipEnable":1');
-
-body = body.replace(/\"vipType":\d+/g, '\"vipType":2');
-
-body = body.replace(/\"expireDaysDays":\d+/g, '\"expireDaysDays":99999');
-
-body = body.replace(/\"vipMemberEnable":\d+/g, '\"vipMemberEnable":1');
-
-body = body.replace(/\"adFreePermanentVip":\w+/g, '\"adFreePermanentVip":true');
-
-body = body.replace(/\"matchVipTrial":\w+/g, '\"matchVipTrial":true');
-
-body = body.replace(/\"adFreeVipEnable":\d+/g, '\"adFreeVipEnable":1');
-
-$done({body});
+$done({body : JSON.stringify(yahee)});
