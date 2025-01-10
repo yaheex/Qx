@@ -2,11 +2,15 @@
 
 项目名称：360相机
 下载地址：https://t.cn/A6O2Vt0D
+更新日期：2025-01-08
+
+
+
 
 **************************************
 
 [rewrite_local]
-^https?:\/\/.*\.camera360\.com\/(api\/(order\/purchase|iap\/check-receipt)|v\d\/operational-positions) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/360xj.js
+^https?:\/\/.*\.camera360\.com\/(api\/(order\/purchase|iap\/check-receipt)|v\d\/operational-positions) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/360xj.js
 
 [mitm]
 hostname = *.camera360.com
@@ -14,14 +18,14 @@ hostname = *.camera360.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var ddm = JSON.parse($response.body);
 
 const vip1 = '/api/order/purchase';
 const vip2 = '/api/iap/check-receipt';
 const ad = '/operational-positions';
 
 if ($request.url.indexOf(vip1) != -1){
-  yahee["data"] = {
+  ddm["data"] = {
     "originalTransactionId" : "490001464780901",
     "errorCode" : 0,
     "purchaseTime" : 1662685749,
@@ -32,7 +36,7 @@ if ($request.url.indexOf(vip1) != -1){
 }
 
 if ($request.url.indexOf(vip2) != -1){
-  yahee["data"] = {
+  ddm["data"] = {
     "sandbox" : 0,
     "purchaseTime" : 1662685749,
     "isTrialPeriod" : 1,
@@ -48,7 +52,7 @@ if ($request.url.indexOf(vip2) != -1){
 }
 
 if ($request.url.indexOf(ad) != -1){
-  yahee.Boot = [];
+  ddm.Boot = [];
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(ddm)});

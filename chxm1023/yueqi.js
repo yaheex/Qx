@@ -4,12 +4,15 @@
 下载地址：https://t.cn/A6OKWoM9
 下载地址：https://t.cn/A6OKWO3Y
 下载地址：https://t.cn/A6OKWjW4
+
+
+
 特别说明：三个地址，全家桶，总共17个APP左右。
 
 **************************************
 
 [rewrite_local]
-^https:\/\/.*api\.quthing\.com\/(.+\/vip|vip|student|user|appearance|background|rest) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/yueqi.js
+^https:\/\/.*api\.quthing\.com\/(.+\/vip|vip|student|user|appearance|background|rest) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/yueqi.js
 
 [mitm]
 hostname = *api.quthing.com

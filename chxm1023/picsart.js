@@ -3,10 +3,13 @@
 项目功能：Picsart美易
 下载地址：https://t.cn/A6MxZ5q1
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.meiease\.cn\/shop\/subscription\/(validate|apple\/purchases) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/picsart.js
+^https?:\/\/api\.meiease\.cn\/shop\/subscription\/(validate|apple\/purchases) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/picsart.js
 
 [mitm]
 hostname = api.meiease.cn
@@ -14,9 +17,9 @@ hostname = api.meiease.cn
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "status" : "success",
   "response" : [
     {
@@ -53,4 +56,4 @@ yahee = {
   ]
 };
 
-$done({body: JSON.stringify(yahee)});
+$done({body: JSON.stringify(chxm1023)});

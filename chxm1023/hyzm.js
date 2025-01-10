@@ -3,10 +3,13 @@
 项目功能：绘影字幕 解锁VIP
 下载地址：https://t.cn/A6oe27Yx
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https:\/\/api\.bluepulse\.cn\/bluepulse-caption-server-front\/api\/v1\/\/user\/app-vip-info url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/yahee/hyzm.js
+^https:\/\/api\.bluepulse\.cn\/bluepulse-caption-server-front\/api\/v1\/\/user\/app-vip-info url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/hyzm.js
 
 [mitm] 
 hostname = api.bluepulse.cn
@@ -15,11 +18,11 @@ hostname = api.bluepulse.cn
 
 
 var body = $response.body;
-var yahee = JSON.parse(body);
+var chxm1023 = JSON.parse(body);
 
-yahee.data.isAppVip = 1;
-yahee.appVipText = "永久VIP";
-yahee.registerTime = 4092599350000;
+chxm1023.data.isAppVip = 1;
+chxm1023.appVipText = "永久VIP";
+chxm1023.registerTime = 4092599350000;
 
-body = JSON.stringify(yahee);
+body = JSON.stringify(chxm1023);
 $done({body});

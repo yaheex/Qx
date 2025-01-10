@@ -4,10 +4,12 @@
 下载地址：https://t.cn/A6KVkB2y
 
 
+
+
 **************************************
 
 [rewrite_local]
-^https:\/\/www\.freshhome\.top url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/rq.js
+^https:\/\/www\.freshhome\.top url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/rq.js
 
 [mitm]
 hostname = www.freshhome.top

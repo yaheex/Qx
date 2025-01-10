@@ -3,10 +3,14 @@
 项目名称：Felo实时翻译
 下载地址：https://t.cn/A6pA5Uiu
 更新日期：2023-12-06
+
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/translator\.felo\.me\/api\/plan\/current url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/Felo.js
+^https?:\/\/translator\.felo\.me\/api\/plan\/current url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Felo.js
 
 [mitm]
 hostname = translator.felo.me
@@ -14,9 +18,9 @@ hostname = translator.felo.me
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "status" : 200,
   "data" : {
     "active_time" : "2023-12-05T16:41:31+0000",
@@ -39,4 +43,4 @@ yahee = {
   "code" : "OK"
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

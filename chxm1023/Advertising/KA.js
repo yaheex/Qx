@@ -4,7 +4,7 @@
 
 *****************************************
 
-^https:\/\/api\.coolapk\.com\/v6\/feed\/detail.* url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/Advertising/main/KA.js
+^https:\/\/api\.coolapk\.com\/v6\/feed\/detail.* url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/KA.js
 
 hostname=api.coolapk.com
 

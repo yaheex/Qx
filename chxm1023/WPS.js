@@ -1,24 +1,28 @@
 /*************************************
 项目名称：WPS Office
 下载地址：https://t.cn/A6KOhd30
+
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/(vas|account|drive)\.wps\.cn\/(query\/api\/.+\/list_purchase_info|api\/(v\d\/spaces|users\/.+\/overview)) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/wps.js
+^https?:\/\/(vas|account|drive)\.wps\.cn\/(query\/api\/.+\/list_purchase_info|api\/(v\d\/spaces|users\/.+\/overview)) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/WPS.js
 
 [mitm]
-hostname = *.wps.cn
+hostname = *.wps.cn
 
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 const vip1 = '/list_purchase_info';
 const vip2 = '/overview';
 const flkj = '/spaces';
 
 if ($request.url.indexOf(vip1) != -1){
-yahee.data["merchandises"] = [
+chxm1023.data["merchandises"] = [
       {
         "sku_key" : "12",
         "expire_time" : 4092599349,
@@ -51,7 +55,7 @@ yahee.data["merchandises"] = [
 }
 
 if ($request.url.indexOf(vip2) != -1){
-  yahee["privilege"] = [
+  chxm1023["privilege"] = [
     {
       "times" : 541826,
       "spid" : "data_recover",
@@ -88,8 +92,8 @@ if ($request.url.indexOf(vip2) != -1){
       "expire_time" : 4092599349
     }
   ];
-  yahee["level"] = 3,
-  yahee["vip"] = {
+  chxm1023["level"] = 3,
+  chxm1023["vip"] = {
     "memberid" : 40,
     "expire_time" : 4092599349,
     "name" : "超级会员",
@@ -115,7 +119,7 @@ if ($request.url.indexOf(vip2) != -1){
 }
 
 if ($request.url.indexOf(flkj) != -1){
-  yahee["total"] = 1100585369600;
+  chxm1023["total"] = 1100585369600;
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

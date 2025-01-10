@@ -3,10 +3,13 @@
 项目名称：Slidebox相册清理
 下载地址：https://too.st/6b4
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/.*-slidebox-ios-prod\.cloudfunctions\.net\/api_v1 url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/slidebox.js
+^https?:\/\/.*-slidebox-ios-prod\.cloudfunctions\.net\/api_v1 url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/slidebox.js
 
 [mitm]
 hostname = *-slidebox-ios-prod.cloudfunctions.net
@@ -14,9 +17,9 @@ hostname = *-slidebox-ios-prod.cloudfunctions.net
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "data" : {
     "env" : {
       "projectId" : "slidebox-ios-prod",
@@ -39,4 +42,4 @@ yahee = {
   }
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

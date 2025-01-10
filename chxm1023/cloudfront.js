@@ -5,10 +5,12 @@
 下载地址：https://t.cn/A6WqTbgz
 
 
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/.*\.cloudfront\.net\/(index\.php\/jsapi\/(paywall|get_story_more_info)|mobile\/verify) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/cloudfront.js
+^https?:\/\/.*\.cloudfront\.net\/(index\.php\/jsapi\/(paywall|get_story_more_info)|mobile\/verify) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/cloudfront.js
 ^https?:\/\/ftmailbox\.cn\/ad_impression\/.+ url reject-200
 
 [mitm]
@@ -18,9 +20,9 @@ hostname = *.cloudfront.net, ftmailbox.cn
 
 
 function modifyBody(modifier) {
-    const yahee = JSON.parse($response.body);
-    modifier(yahee);
-    $response.body = JSON.stringify(yahee);
+    const chxm1023 = JSON.parse($response.body);
+    modifier(chxm1023);
+    $response.body = JSON.stringify(chxm1023);
 }
 
 const url = $request.url;
@@ -30,8 +32,8 @@ const tianqi = /https:\/\/d1hzbu30hrhkoe\.cloudfront\.net\/mobile\/verify\/ios/;
 
 switch (true) {
     case vip.test(url):
-        modifyBody(yahee => {
-            Object.assign(yahee, {
+        modifyBody(chxm1023 => {
+            Object.assign(chxm1023, {
                 "paywall": 0,
                 "premium": 1,
                 "expire": "4092599349",
@@ -43,14 +45,14 @@ switch (true) {
             });
         });
     case ad.test(url):
-        modifyBody(yahee => {
-            yahee.paywall = 0;
-            yahee.accessright = "1";
+        modifyBody(chxm1023 => {
+            chxm1023.paywall = 0;
+            chxm1023.accessright = "1";
         });
     case tianqi.test(url):
-        modifyBody(yahee => {
-            yahee.data = {
-                ...yahee.data,
+        modifyBody(chxm1023 => {
+            chxm1023.data = {
+                ...chxm1023.data,
                 "is_grace": true,
                 "purchased": true,
                 "is_trial": true,

@@ -3,10 +3,13 @@
 项目名称：Hydra相机
 下载地址：https://t.cn/A6OKE5gP
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/creaceed\.com\/apis\/appstore\/verifyreceipt url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/Hydra.js
+^https?:\/\/creaceed\.com\/apis\/appstore\/verifyreceipt url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Hydra.js
 
 [mitm]
 hostname = creaceed.com
@@ -14,9 +17,9 @@ hostname = creaceed.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "environment" : "Production",
   "receipt" : {
     "receipt_type" : "Production",
@@ -89,7 +92,7 @@ yahee = {
       "original_purchase_date" : "2023-09-14 13:58:15 Etc/GMT"
     }
   ],
-  "latest_receipt" : "yahee"
+  "latest_receipt" : "chxm1023"
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

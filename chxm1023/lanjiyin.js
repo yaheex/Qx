@@ -3,12 +3,14 @@
 项目名称：蓝基因-解锁付费功能
 下载地址：https://t.cn/A6CMvGPe
 
+
+
 **************************************
 
 [rewrite_local]
 
 ^https:\/\/tk\.lanjiyin\.com\.cn\/img url reject
-^https:\/\/(tk|course)\.lanjiyin\.com\.cn url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/lanjiyin.js
+^https:\/\/(tk|course)\.lanjiyin\.com\.cn url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/lanjiyin.js
 
 [mitm]
 

@@ -3,10 +3,13 @@
 项目名称：DailyArt(每日艺术)
 下载地址：https://t.cn/A6pv6XfN
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.getdailyart\.com\/api\/(subscription\/verified|auth\/login|check-logged) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/DailyArt.js
+^https?:\/\/api\.getdailyart\.com\/api\/(subscription\/verified|auth\/login|check-logged) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/DailyArt.js
 
 [mitm]
 hostname = api.getdailyart.com
@@ -14,7 +17,7 @@ hostname = api.getdailyart.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 const vipa = '/api/subscription/verified';
 const vipb = '/api/auth/login';
 const vipc = '/api/check-logged';
@@ -28,17 +31,17 @@ const vip = {
   };
 
 if ($request.url.indexOf(vipa) != -1){
-  yahee.data = (vip);
+  chxm1023.data = (vip);
 }
 
 if ($request.url.indexOf(vipb) != -1){
-  yahee.user.subscription = (vip)
-  yahee.user.account_type = "patron-annual";
+  chxm1023.user.subscription = (vip)
+  chxm1023.user.account_type = "patron-annual";
 }
 
 if ($request.url.indexOf(vipc) != -1){
-  yahee.subscription = (vip)
-  yahee.account_type = "patron-annual";
+  chxm1023.subscription = (vip)
+  chxm1023.account_type = "patron-annual";
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

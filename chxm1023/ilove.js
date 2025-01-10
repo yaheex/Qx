@@ -3,10 +3,13 @@
 项目名称：iLove PDF
 下载地址：https://t.cn/A62Xkhs6
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https:\/\/service\.ilovepdf\.com\/v1\/user url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/ilove.js
+^https:\/\/service\.ilovepdf\.com\/v1\/user url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/ilove.js
 
 [mitm]
 hostname = service.ilovepdf.com
@@ -14,9 +17,9 @@ hostname = service.ilovepdf.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "id": 88846584,
   "name": "Apple",
   "email": "001701.68ecf1bf47734080a0afd313503270a8.0327@apple.com",
@@ -168,4 +171,4 @@ yahee = {
   "certificates_left": 0
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

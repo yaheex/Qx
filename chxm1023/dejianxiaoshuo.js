@@ -7,7 +7,7 @@
 
 [rewrite_local]
 
-^https:\/\/dj\.palmestore\.com\/zyuc\/api\/user\/accountInfo url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/dejianxiaoshuo.js
+^https:\/\/dj\.palmestore\.com\/zyuc\/api\/user\/accountInfo url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/dejianxiaoshuo.js
 
 [mitm]
 
@@ -16,14 +16,14 @@ hostname = dj.palmestore.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee.body.userInfo.unlockVipInfo = {
+chxm1023.body.userInfo.unlockVipInfo = {
         "vipType" : 1,
         "vipExpire" : 4092599349,
         "expireDate" : "2099-09-09"
       };
-yahee.body.userInfo.vipInfo = {
+chxm1023.body.userInfo.vipInfo = {
         "content" : "点击进入购买会员",
         "vipType" : 1,
         "expireDate" : "2099-09-09",
@@ -34,4 +34,4 @@ yahee.body.userInfo.vipInfo = {
         "vipExpire" : 4092599349};
 
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

@@ -20,37 +20,39 @@
 下载地址：https://t.cn/A6o1iVTI
 项目名称：佐糖照片修复
 下载地址：https://t.cn/A6o1itzG
+更新日期：2025-01-08
+
+
+
 
 **************************************
 
 [rewrite_local]
+^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/arqjt.js
 
-^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/arqjt.js
-
-[mitm] 
-
+[mitm]
 hostname = *.aoscdn.com, *.apsapp.cn
 
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var ddm = JSON.parse($response.body);
 const vipa = '/base/vip/client/authorizations';
 const vipb = '/vips';
 
 
 if ($request.url.indexOf(vipa) != -1){
-  yahee.data.is_activated = 1;
-  yahee.data.remain_days = 999999999;
-  yahee.data.expire_time = "2099-09-09 09:09:09";
-  yahee.data.expired_at = 4092600296;
-  yahee.data.license_type = "premium";
-  yahee.data.durations = 999999999;
-  yahee.data.vip_special = 1;
+  ddm.data.is_activated = 1;
+  ddm.data.remain_days = 999999999;
+  ddm.data.expire_time = "2099-09-09 09:09:09";
+  ddm.data.expired_at = 4092600296;
+  ddm.data.license_type = "premium";
+  ddm.data.durations = 999999999;
+  ddm.data.vip_special = 1;
 }
 
 if ($request.url.indexOf(vipb) != -1){
-  yahee.data = {
+  ddm.data = {
     "group_expired_at" : 0,
     "is_tried" : 0,
     "max_devices" : 1,
@@ -65,8 +67,8 @@ if ($request.url.indexOf(vipb) != -1){
     "quota" : 999999999,
     "status" : 1,
     "vip_special" : 1,
-    "coin" : 100
+    "coin" : 9999
   };
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(ddm)});

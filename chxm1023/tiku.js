@@ -16,11 +16,14 @@
 下载地址：https://t.cn/A6loAsh7
 下载地址：https://t.cn/A6lo2vWo
 更新日期：2023-12-18
+
+
+
 特别说明：以上下载链接解锁同作者的所有APP
 **************************************
 
 [rewrite_local]
-^https?:\/\/(iosapi\.yueshuian|question\.tiku\.cqxcj|base\.cmoe|yyapi\.yayingtk|learn\.cqrry|api\.sryx|api\.meigit|question\.api\.anjiazui|app\.bftk|question\.civil\.shaoeyy)\.(com|top|net).+(common|front\/customer|vip\/getValidTime) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/tiku.js
+^https?:\/\/(iosapi\.yueshuian|question\.tiku\.cqxcj|base\.cmoe|yyapi\.yayingtk|learn\.cqrry|api\.sryx|api\.meigit|question\.api\.anjiazui|app\.bftk|question\.civil\.shaoeyy)\.(com|top|net).+(common|front\/customer|vip\/getValidTime) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/tiku.js
 
 [mitm]
 hostname = iosapi.yueshuian.com, question.tiku.cqxcj.top, base.cmoe.top, yyapi.yayingtk.com, learn.cqrry.com, api.sryx.net, api.meigit.com, question.api.anjiazui.com, app.bftk.com.cn, question.civil.shaoeyy.com
@@ -28,13 +31,13 @@ hostname = iosapi.yueshuian.com, question.tiku.cqxcj.top, base.cmoe.top, yyapi.y
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 const vipa = /(common|front\/customer)/;
 const vipb = /vip\/getValidTime/;
 
 if(vipa.test($request.url)){
-  yahee.data = {
-   ...yahee.data,
+  chxm1023.data = {
+   ...chxm1023.data,
    isVip: true,
    vipDueDate: 4092599349,
    vipDueDateStr: "2099-09-09 09:09:09",
@@ -43,8 +46,8 @@ if(vipa.test($request.url)){
 }
 
 if(vipb.test($request.url)){
-  yahee.VaildEndTime = "2099-09-09 09:09:09";
-  yahee.Status = 1;
+  chxm1023.VaildEndTime = "2099-09-09 09:09:09";
+  chxm1023.Status = 1;
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

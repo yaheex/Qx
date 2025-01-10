@@ -3,10 +3,13 @@
 项目名称：图纸通
 下载地址：https://t.cn/A6pbMy8f
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.tuzhitong\.com\/api\/User\/GetUserVipInfo url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/tuzhitong.js
+^https?:\/\/api\.tuzhitong\.com\/api\/User\/GetUserVipInfo url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/tuzhitong.js
 
 [mitm]
 hostname = api.tuzhitong.com
@@ -14,9 +17,9 @@ hostname = api.tuzhitong.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "status" : {
     "msg" : "请求成功",
     "code" : 1
@@ -39,4 +42,4 @@ yahee = {
   }
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

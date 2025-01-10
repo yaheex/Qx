@@ -7,7 +7,7 @@
 
 [rewrite_local]
 
-^https:\/\/day-api\.xixitime\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/dsjnr.js
+^https:\/\/day-api\.xixitime\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/dsjnr.js
 
 [mitm]
 
@@ -16,13 +16,13 @@ hostname = day-api.xixitime.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 const user = '/user/info';
 const vip = '/vip/state';
 
 if ($request.url.indexOf(user) != -1){
-yahee.data["foreverVip"] = true;
-yahee.data["vipInfo"] = {
+chxm1023.data["foreverVip"] = true;
+chxm1023.data["vipInfo"] = {
       "vipExpireTime" : 4092599349000,
       "trialPeriod" : true,
       "canUseTrialPeriod" : false,
@@ -34,7 +34,7 @@ yahee.data["vipInfo"] = {
 
 
 if ($request.url.indexOf(vip) != -1){
-yahee["data"] = {
+chxm1023["data"] = {
     "vipExpireTime" : 4092599349000,
     "trialPeriod" : true,
     "canUseTrialPeriod" : false,
@@ -44,4 +44,4 @@ yahee["data"] = {
   };
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

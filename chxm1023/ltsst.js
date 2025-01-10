@@ -3,10 +3,13 @@
 项目名称：旅途随身听(APP+小程序)
 下载地址：https://t.cn/A60UTceU
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(user.*\/getInfo|guideScenic) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/ltsst.js
+^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(user.*\/getInfo|guideScenic) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/ltsst.js
 
 [mitm]
 hostname = www.1314zhilv.com

@@ -3,10 +3,13 @@
 项目名称：养基宝
 下载地址：https://t.cn/A6OIswyz
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/.*\.yangjibao\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/yjb.js
+^https?:\/\/.*\.yangjibao\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/yjb.js
 
 [mitm]
 hostname = *.yangjibao.com

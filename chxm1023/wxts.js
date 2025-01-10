@@ -3,10 +3,13 @@
 项目名称：微信听书
 下载地址：https://t.cn/A6pj4xeR
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/i\.at\.qq\.com\/pay\/memberinfo.+ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/wxts.js
+^https?:\/\/i\.at\.qq\.com\/pay\/memberinfo.+ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/wxts.js
 
 [mitm]
 hostname = i.at.qq.com
@@ -14,9 +17,9 @@ hostname = i.at.qq.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "subscriptionPeriod" : 2405400000,
   "memberCount" : 308000,
   "subscriptionPrice" : 99999999,
@@ -34,4 +37,4 @@ yahee = {
   "startTime" : 1666666666
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

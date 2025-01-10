@@ -3,10 +3,13 @@
 项目名称：野果阅读-外区下载
 下载地址：https://t.cn/A6NTIw89
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/yeguo\.236api\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/yeguoyuedu.js
+^https?:\/\/yeguo\.236api\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/yeguoyuedu.js
 
 [mitm]
 hostname = yeguo.236api.com

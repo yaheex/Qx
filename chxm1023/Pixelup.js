@@ -3,10 +3,14 @@
 项目名称：Pixelup AI照片增强器
 下载地址：https://t.cn/A60PK5CX
 
+
+
+特别提示：如果无效，先试用会员，再使用！
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/receipt-verifier\.cdwapi\.com\/receipt url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/Pixelup.js
+^https?:\/\/receipt-verifier\.cdwapi\.com\/receipt url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Pixelup.js
 
 [mitm]
 hostname = receipt-verifier.cdwapi.com
@@ -14,9 +18,9 @@ hostname = receipt-verifier.cdwapi.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "status": {
     "message": "Success",
     "code": 200
@@ -42,4 +46,4 @@ yahee = {
   }
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

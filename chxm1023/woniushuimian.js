@@ -2,11 +2,15 @@
 
 项目名称：蜗牛睡眠
 下载地址：https://t.cn/A6NBzdYh
+更新日期：2024-12-07
+
+
+
 
 **************************************
 
 [rewrite_local]
-^https?:\/\/snailsleep\.net\/snail\/v\d\/profile\/get.+ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/woniushuimian.js
+^https?:\/\/snailsleep\.net\/snail\/v\d\/profile\/get.+ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/woniushuimian.js
 
 [mitm]
 hostname = snailsleep.net
@@ -14,9 +18,9 @@ hostname = snailsleep.net
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "status" : 200,
   "message" : "OK",
   "result" : {
@@ -32,14 +36,8 @@ yahee = {
     "unique" : "646195d5bc81021ffed65e71",
     "lifelong" : true,
     "radexpired" : false,
-    "links" : [
-
-    ],
     "dreamsUsed" : 0
-  },
-  "links" : [
-
-  ]
+  }
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

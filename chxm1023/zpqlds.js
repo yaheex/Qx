@@ -1,12 +1,14 @@
 /*************************************
 
 项目名称：PhotoSlip-照片清理大师
+下载地址：https://t.cn/A6XMsIv7
+
 
 **************************************
 
 [rewrite_local]
 
-^https:\/\/www2\.tigeroom\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/zpqlds.js
+^https:\/\/www2\.tigeroom\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/zpqlds.js
 
 [mitm] 
 
@@ -15,9 +17,9 @@ hostname = www2.tigeroom.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "message" : "",
   "data" : {
     "phone" : null,
@@ -35,4 +37,4 @@ yahee = {
 };
 
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

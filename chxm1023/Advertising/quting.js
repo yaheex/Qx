@@ -7,7 +7,7 @@
 
             
 [rewrite_local]
-^https?:\/\/(api|api\.next)\.bspapp\.com\/client$ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/Advertising/main/quting.js
+^https?:\/\/(api|api\.next)\.bspapp\.com\/client$ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/quting.js
 
 [mitm]
 hostname = api.bspapp.com, api.next.bspapp.com

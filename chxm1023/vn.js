@@ -3,11 +3,12 @@
 项目名称：VN-视频剪辑
 下载地址：https://t.cn/A6f4hPxo
 
+
 **************************************
 
 [rewrite_local]
 
-^https:\/\/api2\.vlognow\.me\/vn-pay\/api\/v1\/public\/iap\/receipt\/status?(.*?)*$ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/vn.js
+^https:\/\/api2\.vlognow\.me\/vn-pay\/api\/v1\/public\/iap\/receipt\/status?(.*?)*$ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/vn.js
 
 [mitm]
 
@@ -16,9 +17,9 @@ hostname = api2.vlognow.me
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-    yahee = {
+    chxm1023 = {
   "msg" : "success",
   "data" : [
     {
@@ -42,4 +43,4 @@ var yahee = JSON.parse($response.body);
 
 
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

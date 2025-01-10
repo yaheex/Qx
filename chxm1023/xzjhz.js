@@ -7,7 +7,7 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/widget-box-api\.codefuture\.top\/v1\/users\/me url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/xzjhz.js
+^https:\/\/widget-box-api\.codefuture\.top\/v1\/users\/me url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/xzjhz.js
 
 [mitm]
 
@@ -17,12 +17,12 @@ hostname = widget-box-api.codefuture.top
 
 
 var body = $response.body;
-var yahee = JSON.parse(body);
+var chxm1023 = JSON.parse(body);
 
-yahee.inviteCodeAmountLeft = 5;
-yahee.isVip = true;
-yahee.vipExpiredAt = "0";
+chxm1023.inviteCodeAmountLeft = 5;
+chxm1023.isVip = true;
+chxm1023.vipExpiredAt = "0";
 
-body = JSON.stringify(yahee);
+body = JSON.stringify(chxm1023);
 
 $done({body});

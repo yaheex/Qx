@@ -3,10 +3,13 @@
 项目名称：iScreen-小组件-辅助解锁
 下载地址：https://t.cn/A6MsPY5O
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/cs\.kuso\.xyz\/configs.+ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/iscreenfz.js
+^https?:\/\/cs\.kuso\.xyz\/configs.+ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/iscreenfz.js
 ^https?:\/\/pay\.kuso\.xyz\/pay\/pay-check url reject-200
 
 [mitm]
@@ -15,9 +18,9 @@ hostname = cs.kuso.xyz
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "status" : 0,
   "data" : {
     "FeedBanner" : "3333",
@@ -46,4 +49,4 @@ yahee = {
   "ab" : 0
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

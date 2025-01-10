@@ -4,10 +4,13 @@
 下载地址：https://too.st/71V
 更新日期：2023-12-24
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https:\/\/api\.changecollective\.com\/api\/v\d\/user url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/TenPercent.js
+^https:\/\/api\.changecollective\.com\/api\/v\d\/user url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/TenPercent.js
 
 [mitm]
 hostname = api.changecollective.com

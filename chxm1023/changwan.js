@@ -3,10 +3,13 @@
 项目名称：畅玩空间
 下载地址：https://play.wo1wan.com
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/play\.wo1wan\.com\/nextgame\/igwuser\/userinfo url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/changwan.js
+^https?:\/\/play\.wo1wan\.com\/nextgame\/igwuser\/userinfo url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/changwan.js
 
 [mitm]
 hostname = play.wo1wan.com
@@ -15,9 +18,9 @@ hostname = play.wo1wan.com
 
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee.info.LevelInfo = {
+chxm1023.info.LevelInfo = {
       "LastTime" : "0001-01-01T00:00:00Z",
       "AllVipXP" : 1,
       "SVipExpires" : "2099-09-09T09:09:09Z",
@@ -32,4 +35,4 @@ yahee.info.LevelInfo = {
       "NextLevel" : 999
     };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

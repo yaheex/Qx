@@ -3,19 +3,22 @@
 项目名称：极简扫描
 下载地址：https://t.cn/A6KJaeDD
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https:\/\/cn\.czur\.cc\/api\/v\d\/User\/info.+ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/jjsm.js
+^https:\/\/cn\.czur\.cc\/api\/v\d\/User\/info.+ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/jjsm.js
 
 [mitm]
 hostname = cn.czur.cc
 
 *************************************/
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "msg" : "Success",
   "body" : {
     "vipStartOn" : null,
@@ -56,7 +59,7 @@ yahee = {
   "code" : 1000
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});
 
 
 

@@ -3,10 +3,13 @@
 项目名称：TimeTree日历
 下载地址：https://t.cn/A60Me2oT
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.timetreeapp\.com\/.+\/user\/.+ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/TimeTree.js
+^https?:\/\/api\.timetreeapp\.com\/.+\/user\/.+ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/TimeTree.js
 
 [mitm]
 hostname = api.timetreeapp.com
@@ -14,9 +17,9 @@ hostname = api.timetreeapp.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "user_subscription" : {
     "current_subscription" : {
       "status" : 1,
@@ -35,4 +38,4 @@ yahee = {
   }
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

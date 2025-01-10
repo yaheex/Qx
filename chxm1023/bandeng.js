@@ -2,11 +2,15 @@
 
 项目名称：板凳音乐
 下载地址：https://t.cn/A6WODB1b
+更新日期：2024-01-09
+
+
+
 
 **************************************
 
 [rewrite_local]
-^https?:\/\/mobileapp\.wuyamusic\.com\/playmusic-app-server-400\/(vip\/user\/list.+|music\/score\/get2.+|choose\/getmusic|api|app\/swiper) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/bandeng.js
+^https?:\/\/mobileapp\.wuyamusic\.com\/playmusic-app-server-400\/(vip\/user\/list.+|music\/score\/get2.+|choose\/getmusic|api|app\/swiper) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/bandeng.js
 
 [mitm]
 hostname = mobileapp.wuyamusic.com
@@ -14,14 +18,14 @@ hostname = mobileapp.wuyamusic.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var ddm = JSON.parse($response.body);
 const vip = /vip\/user/;
 const yuepu = /music\/score/;
 const ad = /(api\/msg\/listpopupmessage|app\/swiper\/listv)/;
 
 if(vip.test($request.url)){
-	yahee.data = [
-    {...yahee.data,
+	ddm.data = [
+    {...ddm.data,
       "remainderDay" : 99999,
       "version" : 1,
       "type" : 1,
@@ -37,14 +41,14 @@ if(vip.test($request.url)){
 }
 
 if(yuepu.test($request.url)){
-	yahee.data.usableNumber = 99;
-	yahee.data.free = 1;
-	delete yahee.data.amount;
+	ddm.data.usableNumber = 99;
+	ddm.data.free = 1;
+	delete ddm.data.amount;
 }
 
 if(ad.test($request.url)){
-	yahee.data = [];
-	yahee.rows = yahee.rows.filter(item => item.title !== "联系我们");
+	ddm.data = [];
+	ddm.rows = ddm.rows.filter(item => item.title !== "联系我们");
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(ddm)});

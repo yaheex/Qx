@@ -3,10 +3,13 @@
 项目名称：DayMore-时尚日记本
 下载地址：https://t.cn/A6OKkFsC
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/.*\.execute-api\.ap-northeast-2\.amazonaws\.com\/product\/apple\/receipt url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/daymore.js
+^https?:\/\/.*\.execute-api\.ap-northeast-2\.amazonaws\.com\/product\/apple\/receipt url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/daymore.js
 
 [mitm]
 hostname = *.execute-api.ap-northeast-2.amazonaws.com
@@ -14,9 +17,9 @@ hostname = *.execute-api.ap-northeast-2.amazonaws.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "status" : 0,
   "iap_response" : {
     "status" : 0,
@@ -100,4 +103,4 @@ yahee = {
   "result" : 1
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

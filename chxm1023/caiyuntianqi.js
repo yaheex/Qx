@@ -2,74 +2,69 @@
 
 项目名称：彩云天气-净化/解锁SVIP
 下载地址：https://t.cn/A66d95hV
-更新日期：2024-04-12
+更新日期：2024-09-28
+
+
+
 
 **************************************
 
+[filter_local]
+# 禁用上传信息 - 来源: @苍井灰灰
+host, gather.colorfulclouds.net ,reject
+
 [rewrite_local]
-^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|operation\/homefeatures|config)|p\/v\d\/(vip_info|user_info|entries|privileges|trial_card\/info)) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/yahee/caiyuntianqi.js
-^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/yaheex/Qx/main/yahee/caiyuntianqi.js
+# 广告净化/弹窗AD/去除亲友卡/去除悬浮模块
+^https?:\/\/(ad|biz|wrapper|starplucker)\.cyapi\.cn\/.+\/((activity\?app_name|operation|config|req\?app_name=weather)|v\d\/(trial_card\/info|entries|friend_cards|token\/device)) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/caiyuntianqi.js
+# VIP信息
+^https?:\/\/(biz|wrapper|starplucker)\.cyapi\.cn\/(v\d\/user\?app_name|.+\/v\d\/(vip_info|user_detail)) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/caiyuntianqi.js
+# SVIP地图-48小时预报
+^https?:\/\/(api|wrapper)\.cyapi\.cn\/v\d\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/caiyuntianqi.js
 
 [mitm]
-hostname = *.cyapi.cn, *.caiyunapp.com
+hostname = *.cyapi.cn
 
 *************************************/
 
 
-const yahee1 = {};
-const yahee = JSON.parse(typeof $response != "undefined" && $response.body || null);
+let chxm1024 = {}, chxm1023 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 const url = $request.url;
-const adUrl = /(activity\?app_name|operation\/banners)/;
-const tcUrl = /conditions/;
-const vipUrl = /https:\/\/biz\.(cyapi\.cn|caiyunapp\.com)\/p\/v\d\/vip_info/;
-const userUrl = /https:\/\/biz\.(cyapi\.cn|caiyunapp\.com)\/v\d\/user\?app_name/;
-const syUrl = /trial_card\/info/;
-const qyUrl = /entries/;
-const peUrl = /privileges/;
-const topUrl = /operation\/homefeatures/;
+const headers = Object.fromEntries(Object.entries($request.headers).map(([k, v]) => [k.toLowerCase(), v]));
 
 if (typeof $response == "undefined") {
-  yahee1.headers = $request.headers;
-  yahee1.headers['device-token'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uIjoiNjVkMzY2OTRmY2FjMDgwMDE0NDlkODMzIiwidXNlcl9pZCI6IjVmNWJmYzU3ZDJjNjg5MDAxNGUyNmJiOCIsInZlcnNpb24iOjIsImV4cCI6MTcxNjEyOTE3MiwidmlwX2V4cGlyZWRfYXQiOjAsImlzcyI6IndlYXRoZXIiLCJpYXQiOjE3MDgzNTMxNzIsInN2aXBfZXhwaXJlZF9hdCI6MTg1MTUwMTAzMSwicHJpbWFyeSI6dHJ1ZX0.U_LCYNGl3cbBCpjrnjmxYBAuNFSvNCe3dKIrV1MGpzo';
+  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJ1c2VyX2lkIjoiNWY1YmZjNTdkMmM2ODkwMDE0ZTI2YmI4Iiwic3ZpcF9leHBpcmVkX2F0IjoxNzA1MzMxMTY2LjQxNjc3MSwidmlwX2V4cGlyZWRfYXQiOjB9.h_Cem89QarTXxVX9Z_Wt-Mak6ZHAjAJqgv3hEY6wpps';
+  chxm1024.headers = { ...headers, 'device-token': token };
+  if (headers['app-version'] > '7.19.0') { chxm1024.headers['authorization'] = `Bearer ${token}`; }
 } else {
-  switch (true) {
-    case adUrl.test(url):
-      yahee.status = "ok";
-      yahee.activities = [{"items":[{}]}];
-      yahee.data = [];
-      break;
-    case tcUrl.test(url):
-      yahee.actions = [];
-      yahee.popups = [];
-      break;
-    case vipUrl.test(url):
-      yahee.vip = {  ...yahee.vip,
-  "expires_time" : "4092599349",  "is_auto_renewal" : true  };
-      yahee.svip =  {  ...yahee.svip,  "expires_time" : "4092599349",  "is_auto_renewal" : true  };
-      yahee.show_upcoming_renewal = false;
-      break;
-    case userUrl.test(url):
-      yahee.result = { ...yahee.result,  is_vip: true,  vip_expired_at: 4092599349,  svip_given: 1,  is_xy_vip: true,  xy_svip_expire: 4092599349,  wt: {  ...yahee.result.wt,  vip: {  ...yahee.result.wt.vip,  "expired_at" : 0,  "enabled" : true,  "svip_apple_expired_at" : 4092599349,  "is_auto_renewal" : true,  "svip_expired_at" : 4092599349    },    svip_given: 1,  },  is_phone_verified: true,  vip_take_effect: 1,  is_primary: true,  xy_vip_expire: 4092599349,  svip_expired_at: 4092599349,  svip_take_effect: 1,  vip_type: "s",  };
-      break;
-    case syUrl.test(url):
-      yahee.receive_status = 0;
-      yahee.vip_type = "svip";
-      yahee.activated_at = 1712600671;
-      yahee.vip_duration = "999";
-      yahee.expired_at = 4092599349;
-      yahee.has_valid_card = 0;
-      break;
-    case qyUrl.test(url):
-      yahee["entries"] = [{  "url" : "https://t.me/yahee",  "id" : 1,  "name" : "YaHee,",  "type" : 1,  "pos" : 2  }];
-      break;
-    case peUrl.test(url):
-      yahee["privileges"] = [{  "vip_type" : "svip",  "subscription_chat_quota" : 999  }];
-      break;
-    case topUrl.test(url):
-      yahee["data"] = [{  "badge_type" : "",  "title" : "YaHee,",  "url" : "https://t.me/yahee",  "feature_type" : "",  "avatar" : "https://raw.githubusercontent.com/yahee/Script_X/main/icon/ddm2.png"  },...yahee.data];
-      break;
-    }
-  yahee1.body = JSON.stringify(yahee);
+  const data = { "is_auto_renewal": true, "expires_time": 4092599349 };
+  //净化广告
+  if (/banners|entries|friend_cards|trial_card\/info|req\?app_name=weather|conditions/.test(url)) {
+    chxm1023 = {};
+  }
+  //旧版数据
+  if (/user\?app_name/.test(url)) {
+    chxm1023.result = { ...chxm1023.result, "is_vip": true, "vip_expired_at": 4092599349, "svip_given": 1, "is_xy_vip": true, "xy_svip_expire": 4092599349, "wt": { ...chxm1023.result.wt, "vip": { ...chxm1023.result.wt.vip, "expired_at": 0, "enabled": true, "svip_apple_expired_at": 4092599349, "is_auto_renewal": true, "svip_expired_at": 4092599349 }, "svip_given": 1 }, "vip_take_effect": 1, "xy_vip_expire": 4092599349, "svip_expired_at": 4092599349, "svip_take_effect": 1, "vip_type": "s" };
+  }
+  //新版数据
+  if (/user_detail/.test(url)) {
+    chxm1023.vip_info.show_upcoming_renewal = false;
+    chxm1023.vip_info.svip = data;
+  }
+  //VIP信息
+  if (/vip_info/.test(url)) {
+    chxm1023.show_upcoming_renewal = false;
+    chxm1023.svip = data;
+  }
+  //添加一个哆啦A梦
+  if (/features|homefeatures/.test(url)) {
+    chxm1023["data"] = [{  "badge_type" : "",  "title" : "叮当猫",  "url" : "https://t.me/chxm1023",  "feature_type" : "",  "avatar" : "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ddm2.png"  },...chxm1023.data];
+  }
+  chxm1024.body = JSON.stringify(chxm1023);
 }
 
-$done(yahee1);
+//去除悬浮模块
+if (/activity\?app_name/.test(url)) {
+  chxm1024.body = headers['app-version'] < '7.20.0'  ? '{"status":"ok","activities":[{"items":[{}]}]}'  : '{"status":"ok","activities":[]}';
+}
+
+$done(chxm1024);

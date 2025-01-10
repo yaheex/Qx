@@ -15,10 +15,13 @@
 项目名称：ShotCut plog/拼图/快拍/海报
 下载地址：https://t.cn/A60z9lu9
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https:\/\/iap\.etm\.tech\/receipts url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/Collart.js
+^https:\/\/iap\.etm\.tech\/receipts url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Collart.js
 
 [mitm]
 hostname = iap.etm.tech
@@ -26,9 +29,9 @@ hostname = iap.etm.tech
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "entitlements" : [
     {
       "redeem" : {
@@ -48,4 +51,4 @@ yahee = {
 }
 
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

@@ -5,10 +5,13 @@
 下载地址：https://t.cn/A6NhuR3U
 更新日期：2023-12-22
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/.*\.whalean\.com\/(poseidon-service\/api\/user|member\/userMemberHomePageV2|hestia-service\/api\/wpUser\/getUserInfo) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/yaowangbohe.js
+^https?:\/\/.*\.whalean\.com\/(poseidon-service\/api\/user|member\/userMemberHomePageV2|hestia-service\/api\/wpUser\/getUserInfo) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/yaowangbohe.js
 
 [mitm]
 hostname = *.whalean.com

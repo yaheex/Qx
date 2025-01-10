@@ -3,10 +3,13 @@
 项目名称：日历假期
 下载地址：https://t.cn/A60MIBOY
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/calendar\.aiyohoo\.com\/api\/.+\/(user\/device|calendar\/dev_auth) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/rljq.js
+^https?:\/\/calendar\.aiyohoo\.com\/api\/.+\/(user\/device|calendar\/dev_auth) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/rljq.js
 
 [mitm]
 hostname = calendar.aiyohoo.com

@@ -2,11 +2,14 @@
 
 项目名称：驾考宝典
 下载地址：https://t.cn/A6NIJYkf
+
+
+
 温馨提示：不完全解锁，部分功能可用，vip题库不行
 **************************************
 
 [rewrite_local]
-^https?:\/\/.*\.kakamobi\.cn\/api\/open url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/jiakaobaodian.js
+^https?:\/\/.*\.kakamobi\.cn\/api\/open url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/jiakaobaodian.js
 
 [mitm]
 hostname = *.kakamobi.cn

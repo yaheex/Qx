@@ -3,10 +3,13 @@
 项目名称：一飞记账
 下载地址：https://t.cn/A6Oth7tC
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/jz\.jarstones\.com\/api url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/yifeijizhang.js
+^https?:\/\/jz\.jarstones\.com\/api url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/yifeijizhang.js
 
 [mitm]
 hostname = jz.jarstones.com

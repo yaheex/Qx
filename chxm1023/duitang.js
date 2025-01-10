@@ -3,10 +3,13 @@
 项目功能：推糖-壁纸头像美图社区
 下载地址：https://t.cn/Ai3pMcdl
 
+
+
+
 **************************************
 
 [rewrite_local]
-^http[s]?:\/\/.*\.duitang\.com\/napi url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/duitang.js
+^http[s]?:\/\/.*\.duitang\.com\/napi url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/duitang.js
 
 [mitm] 
 hostname = *.duitang.com

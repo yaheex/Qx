@@ -3,10 +3,14 @@
 项目名称：Xmind-思维导图
 下载地址：https://t.cn/AipCL5zE
 
+
+
+使用说明：先登录Xmind账号在恢复购买
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/Xmind.js
+^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Xmind.js
 
 [mitm]
 hostname = *xmind.*
@@ -14,12 +18,12 @@ hostname = *xmind.*
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 const vip = /https:\/\/www\.xmind\.cn\/_res\/devices/;
 const token = /https:\/\/xmind\.cn\/_res\/token\/.+/;
 
 if (vip.test($request.url)) {
-    yahee = {
+    chxm1023 = {
       "license" : {
         "status" : "sub",
         "expireTime" : 4092599349000
@@ -29,8 +33,8 @@ if (vip.test($request.url)) {
 }
 
 if (token.test($request.url)) {
-    yahee.expireDate = 4092599349;
-    yahee.token = "f50633ea8eb04cbb85962b99c47045d7AjOobEGo";
+    chxm1023.expireDate = 4092599349;
+    chxm1023.token = "f50633ea8eb04cbb85962b99c47045d7AjOobEGo";
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

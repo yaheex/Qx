@@ -3,10 +3,13 @@
 项目名称：Vista看天下
 下载地址：https://t.cn/A6ORUIIv
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/open3\.vistastory\.com\/v\d\/api\/(vip|my\/home\/get_home_center|user/pendant|poster\/share_poster|adm\/get_popup_ad|index\/loading_ad) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/Vista.js
+^https?:\/\/open3\.vistastory\.com\/v\d\/api\/(vip|my\/home\/get_home_center|user/pendant|poster\/share_poster|adm\/get_popup_ad|index\/loading_ad) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Vista.js
 
 [mitm] 
 hostname = open3.vistastory.com
@@ -14,7 +17,7 @@ hostname = open3.vistastory.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 const subscription = {      "userId" : 666666,      "beginTime" : 1666666666666,      "id" : 188888,      "endTime" : 4092599349000,      "createTimeFormat" : "2022-10-25 10:57:46",      "createTime" : 1666666666666,      "isActive" : 1    };
 
 const vipa = '/api/vip';
@@ -26,11 +29,11 @@ const ad = '/index/loading_ad';
 
 
 if ($request.url.indexOf(vipa) != -1){
-  yahee["isVip"] = 1;
-  yahee["expireVip"] = 0;
-  yahee["subscriptionVip"] = (subscription);
-  yahee["isUpgradeVip"] = 0;
-  yahee["vipInfo"] = {
+  chxm1023["isVip"] = 1;
+  chxm1023["expireVip"] = 0;
+  chxm1023["subscriptionVip"] = (subscription);
+  chxm1023["isUpgradeVip"] = 0;
+  chxm1023["vipInfo"] = {
     "isMiniVip" : 0,
     "expireVip" : 0,
     "subscriptionVip" : (subscription),
@@ -39,44 +42,44 @@ if ($request.url.indexOf(vipa) != -1){
 }
 
 if ($request.url.indexOf(vipb) != -1){
-  yahee["subscriptionVip"] = (subscription);
-  yahee["isVip"] = 1;
-  yahee["level"] = 99;
-  yahee["exp"] = 0;
-  yahee["info"] = "yahee";
+  chxm1023["subscriptionVip"] = (subscription);
+  chxm1023["isVip"] = 1;
+  chxm1023["level"] = 99;
+  chxm1023["exp"] = 0;
+  chxm1023["info"] = "叮当猫の分享频道:@chxm1023";
 }
 
 if ($request.url.indexOf(guashi) != -1){
-  yahee.userLevel = 99;
-  yahee.status = 1;
-  yahee.msg = "success";
-  if(yahee.pendantList && Array.isArray(yahee.pendantList)) {
-    yahee.pendantList.forEach(item => {
+  chxm1023.userLevel = 99;
+  chxm1023.status = 1;
+  chxm1023.msg = "success";
+  if(chxm1023.pendantList && Array.isArray(chxm1023.pendantList)) {
+    chxm1023.pendantList.forEach(item => {
       item.level = 1;
     });
   }
 }
 
 if ($request.url.indexOf(yaoqing) != -1){
-  yahee.posterList = [
+  chxm1023.posterList = [
     {
       "status" : 1,
       "id" : 6,
       "title" : "                                                                ",
-      "imgUrl" : "https://raw.githubusercontent.com/yahee/Script_X/main/icon/dlam.png",
-      "imgPath" : "https://raw.githubusercontent.com/yahee/Script_X/main/icon/dlam.png",
+      "imgUrl" : "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/dlam.png",
+      "imgPath" : "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/dlam.png",
       "position" : 0
     }
   ];
-  yahee.inviteUrl = "https://t.me/yahee"
+  chxm1023.inviteUrl = "https://t.me/chxm1023"
 }
 
 if ($request.url.indexOf(popup) != -1){
-  delete yahee.popup;
+  delete chxm1023.popup;
 }
 
 if ($request.url.indexOf(ad) != -1){
-  delete yahee.ad;
+  delete chxm1023.ad;
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

@@ -2,10 +2,14 @@
 
 项目名称：心脏+
 下载地址：https://too.st/5DK
+
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.995120\.cn\/mini\/api\/appleplus\/ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/xinzang.js
+^https?:\/\/api\.995120\.cn\/mini\/api\/appleplus\/ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/xinzang.js
 
 [mitm]
 hostname = api.995120.cn
@@ -14,7 +18,7 @@ hostname = api.995120.cn
 
 
 var body = $response.body;
-var newYearCard = '\"yearCard\":{\"goodNo\" : "dc3c24a224cc41fe804108c856ebfd9c",\"status\" : 1,\"content\" : \"YaHee, Studio.\" ,\"endTime\" : \"2099-09-09到期\",\"type\" : 3,\"serviceBalanceId\" : 2501498,\"goodName\" : "心脏+包年"}';
+var newYearCard = '\"yearCard\":{\"goodNo\" : "dc3c24a224cc41fe804108c856ebfd9c",\"status\" : 1,\"content\" : \"叮当猫の分享频道\" ,\"endTime\" : \"2099-09-09到期\",\"type\" : 3,\"serviceBalanceId\" : 2501498,\"goodName\" : "心脏+包年"}';
 var newexperienceCard = '\"experienceCard\":{\"status\" : 1,\"content\" : \"体验卡剩余3次\",\"balanceNum\" : 99999999,\"endTime\" : \"2099-09-09到期\",\"balanceName\" : \"极速心电图（ECG）分析服务\",\"type\" : 1,\"serviceBalanceId\" : 9999999}';
 
 body = body.replace(/\"endTime":".*?"/g, '\"endTime":"2099-09-09到期"');

@@ -3,10 +3,14 @@
 项目名称：Mate-翻译神器 解锁订阅
 下载地址：https://t.cn/A69OzKuZ
 
+
+
+使用方法：先开脚本再开App，失败请重复打开App！
+
 **************************************
 
 [rewrite_local]
-^https:\/\/asia\.gikken\.co\/matesync\/(subscription|login|register_user|check_user) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/mate.js
+^https:\/\/asia\.gikken\.co\/matesync\/(subscription|login|register_user|check_user) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/mate.js
 
 [mitm]
 hostname = asia.gikken.co
@@ -14,7 +18,7 @@ hostname = asia.gikken.co
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 const xxa = '/matesync/subscription';
 const xxb = '/matesync/register_user';
 const xxc = '/matesync/login';
@@ -37,17 +41,17 @@ const hyxx = {
 };
 
 if ($request.url.indexOf(xxa) != -1){
-yahee = (hyxx);}
+chxm1023 = (hyxx);}
 
 if ($request.url.indexOf(xxb) != -1){
-yahee.subscriptionInfo = (hyxx);}
+chxm1023.subscriptionInfo = (hyxx);}
 
 if ($request.url.indexOf(xxc) != -1){
-yahee.subscriptionInfo = (hyxx);}
+chxm1023.subscriptionInfo = (hyxx);}
 
 if ($request.url.indexOf(xxd) != -1){
-yahee = {
+chxm1023 = {
   "registered" : true
 };}
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

@@ -3,10 +3,13 @@
 项目名称：刷刷题
 下载地址：https://t.cn/A60szmtc
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.shuashuati\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/shuashuati.js
+^https?:\/\/api\.shuashuati\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/shuashuati.js
 
 [mitm]
 hostname = api.shuashuati.com
@@ -16,18 +19,18 @@ hostname = api.shuashuati.com
 
 var body = $response.body;
 
-function deepDelete(yahee1, propToDelete) {
-  for (let prop in yahee1) {
+function deepDelete(chxm1024, propToDelete) {
+  for (let prop in chxm1024) {
     if (prop === propToDelete) {
-      delete yahee1[prop];
-    } else if (typeof yahee1[prop] === "object") {
-      deepDelete(yahee1[prop], propToDelete);
+      delete chxm1024[prop];
+    } else if (typeof chxm1024[prop] === "object") {
+      deepDelete(chxm1024[prop], propToDelete);
     }
   }
 }
-var yahee = JSON.parse(body);
-deepDelete(yahee, ['adInfo','defaultAd']);
-body = JSON.stringify(yahee);
+var chxm1023 = JSON.parse(body);
+deepDelete(chxm1023, ['adInfo','defaultAd']);
+body = JSON.stringify(chxm1023);
 
 body = body.replace(/\"state":\d+/g, '\"state":2');
 

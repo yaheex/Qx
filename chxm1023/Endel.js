@@ -3,10 +3,13 @@
 项目名称：Endel
 下载地址：https://t.cn/A60WXk6k
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/api-production\.endel\.io\/v\d\/call url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/Endel.js
+^https?:\/\/api-production\.endel\.io\/v\d\/call url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Endel.js
 
 [mitm]
 hostname = api-production.endel.io
@@ -14,9 +17,9 @@ hostname = api-production.endel.io
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee.subscription = {
+chxm1023.subscription = {
     "promo_type" : "DEFAULT",
     "period" : "YEAR",
     "store_trial" : false,
@@ -32,4 +35,4 @@ yahee.subscription = {
     "trial_canceled" : false
   };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

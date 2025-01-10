@@ -3,10 +3,13 @@
 项目名称：经济学人·商论
 下载地址：https://t.cn/A60bUTVl
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https:\/\/api\.hummingbird\.businessreview\.global\/api\/subscriptions\/get_active url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/jjxrsl.js
+^https:\/\/api\.hummingbird\.businessreview\.global\/api\/subscriptions\/get_active url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/jjxrsl.js
 
 [mitm]
 hostname = api.hummingbird.businessreview.global
@@ -14,9 +17,9 @@ hostname = api.hummingbird.businessreview.global
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "subscription_type" : "Paid",
   "account_member_since" : "Jul 17th, 2023",
   "subscriptions" : [
@@ -56,4 +59,4 @@ yahee = {
   "error" : false
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

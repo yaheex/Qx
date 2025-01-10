@@ -3,10 +3,13 @@
 项目名称：一起练琴
 下载地址：https://t.cn/A6OT6Ald
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.(.*lianqin.*|mangofuture)\.(com|cn)\/client\/v\d\/(user_vip|my_info) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/yiqilianqin.js
+^https?:\/\/api\.(.*lianqin.*|mangofuture)\.(com|cn)\/client\/v\d\/(user_vip|my_info) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/yiqilianqin.js
 
 [mitm]
 hostname = api.*lianqin*.*, api.mangofuture.cn

@@ -3,10 +3,13 @@
 项目名称：Replica-屏幕镜像
 下载地址：https://t.cn/A6WlGNDi
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.apphud\.com\/v1\/subscriptions url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/replica.js
+^https?:\/\/api\.apphud\.com\/v1\/subscriptions url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/replica.js
 
 [mitm]
 hostname = api.apphud.com
@@ -14,9 +17,9 @@ hostname = api.apphud.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "data" : {
     "results" : {
       "locale" : "zh_CN",
@@ -59,4 +62,4 @@ yahee = {
   "errors" : null
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

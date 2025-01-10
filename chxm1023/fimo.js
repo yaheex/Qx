@@ -3,10 +3,14 @@
 项目功能：Fimo-复古胶片相机 解锁Vip
 下载地址：https://t.cn/A6ouHsIk
 
+
+
+使用说明：打开App直接恢复购买，不用登录
+
 **************************************
 
 [rewrite_local]
-^https:\/\/server\.(yoyiapp|zbisq)\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/fimo.js
+^https:\/\/server\.(yoyiapp|zbisq)\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/fimo.js
 
 [mitm]
 hostname = server.*.com
@@ -14,13 +18,13 @@ hostname = server.*.com
 *************************************/
 
 
-var yahee = JSON.parse($response.body); 
+var chxm1023 = JSON.parse($response.body); 
 const vipa = '/fimo-user/user';
 const vipb = '/fimo-user/apple/certificate';
 
 
 if ($request.url.indexOf(vipa) != -1){
-  yahee.films = [
+  chxm1023.films = [
     {
       "goodId" : "fimoAesthetic400",
       "pay" : "sync",
@@ -67,12 +71,12 @@ if ($request.url.indexOf(vipa) != -1){
       "goodName" : "LM Color 100"
     }
   ];
-  yahee.subscribe = {
+  chxm1023.subscribe = {
     "valid" : true,
     "forever" : 1,
     "endTime" : 4092599349
   };
-  yahee.filmsCommonOrder = [
+  chxm1023.filmsCommonOrder = [
     "fimoBlackTea50",
     "fimoDiary400",
     "fimoLMcolor100_w",
@@ -83,7 +87,7 @@ if ($request.url.indexOf(vipa) != -1){
 }
 
 if ($request.url.indexOf(vipb) != -1){
-  yahee= {
+  chxm1023= {
   "environment" : "Production",
   "receipt" : {
     "receipt_type" : "Production",
@@ -198,4 +202,4 @@ if ($request.url.indexOf(vipb) != -1){
   ]
 };}
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

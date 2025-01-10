@@ -14,10 +14,13 @@
 下载地址：https://t.cn/A6KcuPty
 更新日期：2023-12-01
 
+
+
+
 **************************************
 
 [rewrite_local]
-http:\/\/.*\.dicallapp\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/zhfqjt.js
+http:\/\/.*\.dicallapp\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/zhfqjt.js
 
 [mitm]
 hostname = *.dicallapp.com

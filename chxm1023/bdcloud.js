@@ -3,21 +3,23 @@
 项目名称：百度网盘，一刻相册 解锁部分功能
 下载地址：https://t.cn/AiT82mfg
 下载地址：https://t.cn/Ainbj7GV
+更新日期：2025-01-09
+
+
+
 
 **************************************
 
 [rewrite_local]
-
-^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/yahee/bdcloud.js
+^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/bdcloud.js
 
 [mitm]
-
 hostname = pan.baidu.com
 
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var ddm = JSON.parse($response.body);
 const yike = '/getminfo';
 const ad = '/adswitch';
 const wangpan = '/membership/user';
@@ -26,7 +28,7 @@ const hf = '/welfare/list';
 const usercfg = '/api/usercfg';
 
 if ($request.url.indexOf(yike) != -1){
-  yahee = {
+  ddm = {
   "errno": 0,
   "request_id": 342581654394297772,
   "has_purchased": 1,
@@ -64,11 +66,11 @@ if ($request.url.indexOf(yike) != -1){
 }
 
 if ($request.url.indexOf(ad) != -1){
-  yahee.switch = "open";
+  ddm.switch = "open";
 }
 
 if ($request.url.indexOf(wangpan) != -1){
-  yahee.product_infos = [
+  ddm.product_infos = [
     {
       "product_id" : "5310897792128633390",
       "end_time" : 4092600296,
@@ -93,7 +95,7 @@ if ($request.url.indexOf(wangpan) != -1){
       "status" : 1
     }
   ];
-  yahee.guide_data = {
+  ddm.guide_data = {
     "title" : "超级会员 SVIP",
     "content" : "已拥有极速下载+视频倍速特权",
     "button" : {
@@ -101,20 +103,20 @@ if ($request.url.indexOf(wangpan) != -1){
       "action_url" : "https://pan.baidu.com/wap/vip/user?from=myvip2#svip"
     }
   };
-  yahee.identity_icon = {
+  ddm.identity_icon = {
     "vip" : "https://internal-amis-res.cdn.bcebos.com/images/2019-8/1566452237582/78b88bf113b7.png",
     "common" : "https://internal-amis-res.cdn.bcebos.com/images/2019-8/1566452539056/bf72cf66fae1.png",
     "svip" : "https://internal-amis-res.cdn.bcebos.com/images/2019-8/1566452115696/38c1d743bfe9.png",
     "contentvip" : ""
   };
-  yahee.error_code = 1;
-  delete yahee.tips_data_list;
-  delete yahee.status_data_arr;
-  delete yahee.sub_card_list;
+  ddm.error_code = 1;
+  delete ddm.tips_data_list;
+  delete ddm.status_data_arr;
+  delete ddm.sub_card_list;
 }
 
 if ($request.url.indexOf(list) != -1){
-  yahee.data = [
+  ddm.data = [
     {
       "sub_title" : "",
       "id" : 856,
@@ -137,11 +139,11 @@ if ($request.url.indexOf(list) != -1){
 }
 
 if ($request.url.indexOf(hf) != -1){
-  delete yahee.data;
+  delete ddm.data;
 }
 
 if ($request.url.indexOf(usercfg) != -1){
-  yahee.user_new_define_cards = [
+  ddm.user_new_define_cards = [
     {
       "card_id" : "1",
       "card_type" : "4",
@@ -161,4 +163,4 @@ if ($request.url.indexOf(usercfg) != -1){
   ];
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(ddm)});

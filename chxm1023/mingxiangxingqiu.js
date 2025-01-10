@@ -2,10 +2,13 @@
 项目名称：冥想星球
 下载地址：https://t.cn/A6pmsyPj
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/kc\.xinli001\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/mingxiangxingqiu.js
+^https?:\/\/kc\.xinli001\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/mingxiangxingqiu.js
 
 [mitm]
 hostname = kc.xinli001.com

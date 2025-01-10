@@ -3,10 +3,13 @@
 项目名称：夸克
 下载地址：https://t.cn/A69h68E2
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|capacity\/growth\/info) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/kuake.js
+^https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|capacity\/growth\/info) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/kuake.js
 
 [mitm]
 hostname = drive*.quark.cn
@@ -15,14 +18,14 @@ hostname = drive*.quark.cn
 
 
 var body = $response.body;
-var yahee = JSON.parse(body);
+var chxm1023 = JSON.parse(body);
 
 const vipa = '/clouddrive/member';
 const vipb = '/clouddrive/distribute/detail';
 const vipc = '/clouddrive/capacity/growth/info';
 
 if ($request.url.indexOf(vipa) != -1){
-  yahee.data = {
+  chxm1023.data = {
     "member_type": "SUPER_VIP",
     "image_backup": 1,
     "deep_recycle_stat": {
@@ -64,7 +67,7 @@ if ($request.url.indexOf(vipa) != -1){
 }
 
 if ($request.url.indexOf(vipb) != -1){
-  yahee.data = {
+  chxm1023.data = {
     "last_id": 0,
     "last_page": true,
     "distribute_detail": [{
@@ -80,7 +83,7 @@ if ($request.url.indexOf(vipb) != -1){
 }
 
 if ($request.url.indexOf(vipc) != -1){
-  yahee.data = {
+  chxm1023.data = {
     "member_type": "SUPER_VIP",
     "super_vip_exp_at": 4092599349000,
     "use_capacity": 55029395707,
@@ -132,4 +135,4 @@ if ($request.url.indexOf(vipc) != -1){
   };
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

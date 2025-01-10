@@ -1,25 +1,30 @@
 /*************************************
 
 项目名称：挖财记账
-下载地址：https://too.st/5ez
-脚本作者：yahee
+下载地址：https://t.cn/A6SkblaQ
+更新日期：2024-07-08
+
+
+
+
 **************************************
 
 [rewrite_local]
-^https?:\/\/jz\.wacaijizhang\.com\/(api\/(my\/v\d|vipmember\/v\d\/index|usercenter\/userInfo)|jz-activity\/bkk-frontier\/api\/vipmember\/v\d\/index) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/wacaijizhang.js
+^https?:\/\/jz\.wacaijizhang\.com\/(api\/(my\/v\d|vipmember\/v\d\/index|usercenter\/userInfo)|jz-activity\/bkk-frontier\/api\/vipmember\/v\d\/index) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/wacaijizhang.js
 
 [mitm]
 hostname = jz.wacaijizhang.com
 
 *************************************/
 
-var yahee = JSON.parse($response.body);
+
+var chxm1023 = JSON.parse($response.body);
 const my = /api\/my\/v\d/;
 const vip = /(vipmember\/v\d\/index|jz-activity\/bkk-frontier\/api\/vipmember\/v\d\/index)/;
 const user = /usercenter\/userInfo/;
 
 if(my.test($request.url)){
-  yahee.data.vipInfo = {
+  chxm1023.data.vipInfo = {
     "vipMemberType" : "挖财记账超级年会员",
     "isVipMember" : true,
     "expirationDate" : 4092599349000,
@@ -30,8 +35,8 @@ if(my.test($request.url)){
 }
 
 if(vip.test($request.url)){
-  yahee.data.vipInfo = {
-    ...yahee.data.vipInfo,
+  chxm1023.data.vipInfo = {
+    ...chxm1023.data.vipInfo,
     "adFreeVipEnable" : 1,
     "adFreePermanentVip" : true,
     "vipMemberEnable" : 1,
@@ -49,7 +54,7 @@ if(vip.test($request.url)){
 }
 
 if(user.test($request.url)){
-  yahee.data.isVip = 1;
+  chxm1023.data.isVip = 1;
 }
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

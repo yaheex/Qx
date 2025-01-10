@@ -3,10 +3,13 @@
 项目名称：Noted录音笔记软件
 下载地址：https://t.cn/A6O07XKv
 
+
+
+
 **************************************
 
 [rewrite_local]
-^https:\/\/subscription-api\.notedapp\.io\/api\/verifyReceipt url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/Noted.js
+^https:\/\/subscription-api\.notedapp\.io\/api\/verifyReceipt url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Noted.js
 
 [mitm] 
 hostname = subscription-api.notedapp.io
@@ -14,9 +17,9 @@ hostname = subscription-api.notedapp.io
 *************************************/
 
 
-var yahee = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
-yahee = {
+chxm1023 = {
   "status" : 0,
   "receipt" : {
     "receipt_type" : "Production",
@@ -69,7 +72,7 @@ yahee = {
       "original_purchase_date" : "2023-09-09 09:09:10 Etc/GMT"
     }
   ],
-  "latest_receipt" : "yahee",
+  "latest_receipt" : "chxm1023",
   "environment" : "Production",
   "pending_renewal_info" : [
     {
@@ -80,7 +83,7 @@ yahee = {
     }
   ],
   "warning" : "仅供学习，禁止转载或售卖",
-  "Telegram" : "https://t.me/yahee"
+  "Telegram" : "https://t.me/chxm1023"
 };
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(chxm1023)});

@@ -5,10 +5,13 @@
 版本支持：7.0.35
 更新日期：2024-02-11
 
+
+
+
 **************************************
 
 [rewrite_local]
-(^https?:\/\/(ytmsout|ytapi|getway)\.radio\.cn|60\.205\.171\.165)\/(contentBiz|publish|rights|(user|ytsrv\/srv)\/(appUser|webPage)\/getUserInfo|app.+) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/yunting.js
+(^https?:\/\/(ytmsout|ytapi|getway)\.radio\.cn|60\.205\.171\.165)\/(contentBiz|publish|rights|(user|ytsrv\/srv)\/(appUser|webPage)\/getUserInfo|app.+) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/yunting.js
 
 [mitm]
 hostname = *.radio.cn, 60.205.171.165
@@ -17,7 +20,7 @@ hostname = *.radio.cn, 60.205.171.165
 
 
 var body = $response.body;
-var yahee = JSON.parse(body);
+var chxm1023 = JSON.parse(body);
 const js = /(ytmsout|ytapi|getway)/;
 const ad = /publish\/recScreen\/getLoadPage/;
 const user1 = /user\/(appUser|webPage)\/getUserInfo/;
@@ -53,16 +56,16 @@ if(ad.test($request.url)){
 
 //用户信息
 if(user1.test($request.url)){
-  yahee.data = {
-    ...yahee.data,
-    "userName" : "YaHee",
+  chxm1023.data = {
+    ...chxm1023.data,
+    "userName" : "叮当猫",
     "vipFlag" : 1,
-    "nickName" : "YaHee",
+    "nickName" : "叮当猫",
     "icon" : "http://yunting-bj-radio-client.oss-cn-beijing.aliyuncs.com/25010%2Fsc_upload%2F202301%2F22%2F09%2F4eL7lc2023012209974.JPEG",
     "vipExpireTime" : 4092599349000
   };
-  yahee.data.memberMarkVo = {
-    ...yahee.data.memberMarkVo,
+  chxm1023.data.memberMarkVo = {
+    ...chxm1023.data.memberMarkVo,
     "signActiveImg" : "https://ytmedia.radio.cn/CCYT%2F2023%2F01%2F06%2F1672991809upc7cd442706edf9cd097eab02ddbc0fe7.png",
     "foreColorVal" : "#292421",
     "markText" : "VIP身份",
@@ -72,36 +75,36 @@ if(user1.test($request.url)){
     "packageName" : "VIP",
     "backGroundColorVal" : "#F0FFFF"
   };
-  body = JSON.stringify(yahee);
+  body = JSON.stringify(chxm1023);
 }
 
 if(user2.test($request.url)){
-  yahee.object.baseInfo = {
+  chxm1023.object.baseInfo = {
     "isVip" : 1,
     "vipTime" : "2099-09-09",
-    "nickName" : "YaHee,",
+    "nickName" : "叮当猫",
     "userIcon" : "http://yunting-bj-radio-client.oss-cn-beijing.aliyuncs.com/25010%2Fsc_upload%2F202301%2F22%2F09%2F4eL7lc2023012209974.JPEG"
   };
-  body = JSON.stringify(yahee);
+  body = JSON.stringify(chxm1023);
 }
 
 //VIP面板时间
 if(vip.test($request.url)){
-  yahee.data.userPackageExpireVo =  {
+  chxm1023.data.userPackageExpireVo =  {
     "endTime" : "2099-09-09 09:09:09",
     "startTime" : "2023-07-20 00:00:00"
   };
-  body = JSON.stringify(yahee);
+  body = JSON.stringify(chxm1023);
 }
 
 //处理横幅
 if(hf.test($request.url)){
-  yahee.data.data = yahee.data.data.filter(item => {
+  chxm1023.data.data = chxm1023.data.data.filter(item => {
     const isTitleMismatch = item.plateVo && item.plateVo.plateContentList &&  !item.plateVo.plateContentList.some(  content => content.title === "一分钟看懂VIP vs 付费"  );
     const isLayoutMismatch = item.layoutName && item.layoutName !== "VIP频道banner（16:9）" &&  item.layoutName !== "频道banner-VIP" &&  item.layoutName !== "Banner（16:9）" &&  item.layoutName !== "banner";
     return isTitleMismatch && isLayoutMismatch;
   });
-  body = JSON.stringify(yahee);
+  body = JSON.stringify(chxm1023);
 }
 
 $done({body});
