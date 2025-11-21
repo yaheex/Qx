@@ -3,9 +3,9 @@
 项目名称：OtterLife
 下载地址：https://t.cn/A68TbbDM
 更新日期：2024-08-06
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,13 +18,13 @@ hostname = otter-api.codefuture.top
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data = {
-  ...chxm1023.data,
+yahe1023.data = {
+  ...yahe1023.data,
   "vipType" : "lifetime",
   "vipDeadline" : "2099-09-09T09:09:09.000Z",
   "isVip" : true
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -2,9 +2,9 @@
 
 项目名称：RainViewer天气预报
 下载地址：https://t.cn/A6WqTbgz
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = d1hzbu30hrhkoe.cloudfront.net
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data = {...chxm1023.data,
+yahe1023.data = {...yahe1023.data,
     "is_grace" : true,
     "purchased" : true,
     "is_trial" : true,
@@ -30,4 +30,4 @@ chxm1023.data = {...chxm1023.data,
     "is_expired" : false
   };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

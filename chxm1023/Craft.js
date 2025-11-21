@@ -3,9 +3,9 @@
 项目名称：Craft-文件笔记编辑器
 下载地址：https://t.cn/A6HEVDeP
 更新日期：2024-10-15
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,12 +18,12 @@ hostname = api.craft.do
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
 if (/auth\/v\d\/profile/.test($request.url)) {
-  chxm1023.teams = chxm1023.teams || [{}];
-  chxm1023.spaces = chxm1023.spaces || [{}];
-  chxm1023.teams.forEach(team => {
+  yahe1023.teams = yahe1023.teams || [{}];
+  yahe1023.spaces = yahe1023.spaces || [{}];
+  yahe1023.teams.forEach(team => {
     team.tier = "V2_Team";
     team.subscriptionInfo = {
       "autoRenewStatus": true,
@@ -34,14 +34,14 @@ if (/auth\/v\d\/profile/.test($request.url)) {
       "renewPeriod": "Yearly"
     };
   });
-  chxm1023.spaces.forEach(space => {
+  yahe1023.spaces.forEach(space => {
     space.tier = "V2_Team";
   });
 }
 
 
 if (/subscription\/receipt/.test($request.url)) {
-  chxm1023.subscription = {
+  yahe1023.subscription = {
     "expirationDate": 4092599349000,
     "subscriptionActive": true,
     "subscriptionId": "55555555-8888-1023-8888-999999999999",
@@ -54,9 +54,9 @@ if (/subscription\/receipt/.test($request.url)) {
 }
 
 if (/subscription\/teams\/get-subscriptions/.test($request.url)) {
-  chxm1023.subscriptions = chxm1023.subscriptions || [{}];
-  chxm1023.tier = "V2_Team";
-  chxm1023.subscriptions.push({
+  yahe1023.subscriptions = yahe1023.subscriptions || [{}];
+  yahe1023.tier = "V2_Team";
+  yahe1023.subscriptions.push({
     "isPrimary": true,
     "provider": "AppStore",
     "subscriptionId": "55555555-8888-1023-8888-999999999999",
@@ -68,4 +68,4 @@ if (/subscription\/teams\/get-subscriptions/.test($request.url)) {
   });
 }
 
-$done({ body: JSON.stringify(chxm1023) });
+$done({ body: JSON.stringify(yahe1023) });

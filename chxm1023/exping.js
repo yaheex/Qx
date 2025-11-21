@@ -2,9 +2,9 @@
 
 项目名称：exping地图标记
 下载地址：https://t.cn/A6OZKTpD
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,7 +17,7 @@ hostname = api.expingworld.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 var vip = {
       "channel" : "ios",
       "vipType" : "year",
@@ -36,11 +36,11 @@ const user = 'users/0';
 const info = 'users/vip-info';
 
 if ($request.url.indexOf(info) != -1){
-  chxm1023.data = (vip);
+  yahe1023.data = (vip);
 }
 
 if ($request.url.indexOf(user) != -1){
-  chxm1023.data.vipInfo = (vip);
+  yahe1023.data.vipInfo = (vip);
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

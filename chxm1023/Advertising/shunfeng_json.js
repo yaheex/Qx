@@ -7,7 +7,7 @@
 
 [rewrite_local]
 
-https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/shunfeng_json.js
+https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/shunfeng_json.js
 
 [mitm]
 
@@ -16,9 +16,9 @@ hostname = ccsp-egmas.sf-express.com
 ****************************************/
 
 if ($request.url.indexOf("app/ad/queryInfoFlow") != -1) {
-    var chxm1023 = JSON.parse($response.body);
-    chxm1023.obj = Object.values(chxm1023.obj).filter((item) => item.adverId==2833);
+    var yahe1023 = JSON.parse($response.body);
+    yahe1023.obj = Object.values(yahe1023.obj).filter((item) => item.adverId==2833);
     $done({
-        body: JSON.stringify(chxm1023),
+        body: JSON.stringify(yahe1023),
     });
 }

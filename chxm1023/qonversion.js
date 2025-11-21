@@ -3,9 +3,9 @@
 项目名称：Qonversion-合集
 下载地址：https://t.cn/A68lP8qz
 更新日期：2024-08-19
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,7 +18,7 @@ hostname = api.qonversion.io
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const headers = $request.headers;
 const ua = headers['User-Agent'] || headers['user-agent'];
 const times = Math.floor(Date.now() / 1000);  // 获取当前时间戳
@@ -37,9 +37,9 @@ for (const key in list) {
       "store_id": store_id,
       "duration": 99999
     };
-    chxm1023.data["products"].push(data);
-    chxm1023.data["user_products"] = [data];
-    chxm1023.data["permissions"] = [
+    yahe1023.data["products"].push(data);
+    yahe1023.data["user_products"] = [data];
+    yahe1023.data["permissions"] = [
       {
         "id" : name,
         "trial_start_timestamp" : times,
@@ -69,4 +69,4 @@ for (const key in list) {
   }
 }
 
-$done({body: JSON.stringify(chxm1023)});
+$done({body: JSON.stringify(yahe1023)});

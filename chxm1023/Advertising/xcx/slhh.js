@@ -2,11 +2,14 @@
 
 项目名称：搜罗好货
 下载地址：#小程序://搜罗好货/Rt7Kuvpe4GLPjaD
+脚本作者：YaHee,
+
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
 [rewrite_local]
-^https?:\/\/www\.i3zh\.com\/wp-json\/watch-life-net\/.+\/(options|posts) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/yahee/Advertising/xcx/slhh.js
+^https?:\/\/www\.i3zh\.com\/wp-json\/watch-life-net\/.+\/(options|posts) url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/xcx/slhh.js
 
 [mitm]
 hostname = www.i3zh.com
@@ -15,12 +18,12 @@ hostname = www.i3zh.com
 
 
 var body = $response.body;
-var yahee = JSON.parse(body);
+var yahe1023 = JSON.parse(body);
 
-yahee.listAdId = "";
-yahee.videoAdId = "";
-yahee.interstitialAdId = "";
-yahee.excitationAd = "0";
-yahee.detailAd = "0";
+yahe1023.listAdId = "";
+yahe1023.videoAdId = "";
+yahe1023.interstitialAdId = "";
+yahe1023.excitationAd = "0";
+yahe1023.detailAd = "0";
 
-$done({body : JSON.stringify(yahee)});
+$done({body : JSON.stringify(yahe1023)});

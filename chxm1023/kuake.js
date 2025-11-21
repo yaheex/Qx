@@ -2,9 +2,9 @@
 
 项目名称：夸克
 下载地址：https://t.cn/A69h68E2
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,14 +18,14 @@ hostname = drive*.quark.cn
 
 
 var body = $response.body;
-var chxm1023 = JSON.parse(body);
+var yahe1023 = JSON.parse(body);
 
 const vipa = '/clouddrive/member';
 const vipb = '/clouddrive/distribute/detail';
 const vipc = '/clouddrive/capacity/growth/info';
 
 if ($request.url.indexOf(vipa) != -1){
-  chxm1023.data = {
+  yahe1023.data = {
     "member_type": "SUPER_VIP",
     "image_backup": 1,
     "deep_recycle_stat": {
@@ -67,7 +67,7 @@ if ($request.url.indexOf(vipa) != -1){
 }
 
 if ($request.url.indexOf(vipb) != -1){
-  chxm1023.data = {
+  yahe1023.data = {
     "last_id": 0,
     "last_page": true,
     "distribute_detail": [{
@@ -83,7 +83,7 @@ if ($request.url.indexOf(vipb) != -1){
 }
 
 if ($request.url.indexOf(vipc) != -1){
-  chxm1023.data = {
+  yahe1023.data = {
     "member_type": "SUPER_VIP",
     "super_vip_exp_at": 4092599349000,
     "use_capacity": 55029395707,
@@ -135,4 +135,4 @@ if ($request.url.indexOf(vipc) != -1){
   };
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -14,9 +14,9 @@
 下载地址：https://t.cn/A6KOxcj9
 项目名称：ShotCut plog/拼图/快拍/海报
 下载地址：https://t.cn/A60z9lu9
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -29,9 +29,9 @@ hostname = iap.etm.tech
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "entitlements" : [
     {
       "redeem" : {
@@ -51,4 +51,4 @@ chxm1023 = {
 }
 
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

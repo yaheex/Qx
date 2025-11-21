@@ -2,9 +2,9 @@
 
 项目名称：网易蜗牛读书
 下载地址：https://t.cn/A6NBBLeU
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -19,6 +19,6 @@ hostname = p.du.163.com
 
 var body=$response.body;
 
-chxm1023 = body.replace(/tradeEndTime\":\d+/g,'tradeEndTime":4092599349000');
+yahe1023 = body.replace(/tradeEndTime\":\d+/g,'tradeEndTime":4092599349000');
 
-$done(chxm1023);
+$done(yahe1023);

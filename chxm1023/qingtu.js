@@ -2,9 +2,9 @@
 
 项目名称：轻图
 下载地址：https://t.cn/A6OjOeJY
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = purchase-qingtu-api.b612kaji.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 ={
+yahe1023 ={
   "result" : {
     "products" : [
       {
@@ -34,4 +34,4 @@ chxm1023 ={
   }
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

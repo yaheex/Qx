@@ -2,8 +2,8 @@
 
 项目名称：3D Scanner-绘制/测量平面图
 下载地址：https://t.cn/A6CCxxqJ
-
-
+脚本作者：YaHee,
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -16,9 +16,9 @@ hostname = buy.itunes.apple.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "environment" : "Production",
   "receipt" : {
     "receipt_type" : "Production",
@@ -95,4 +95,4 @@ chxm1023 = {
 };
 
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

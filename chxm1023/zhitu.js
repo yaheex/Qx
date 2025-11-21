@@ -2,9 +2,9 @@
 
 项目名称：Lens智图-画质增强&二次元AI作画
 下载地址：https://t.cn/A6NIfo7O
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = api.revenuecat.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "request_date_ms" : 1681823991752,
   "request_date" : "2023-04-18T13:19:51Z",
   "subscriber" : {
@@ -38,7 +38,7 @@ chxm1023 = {
     "subscriptions" : {
       "yearly_sub_pro" : {
         "warning" : "仅供学习，禁止转载或售卖",
-        "wechat" : "chxm1023",
+        "wechat" : "yahe1023",
         "purchase_date" : "2022-09-09T09:09:09Z",
         "original_purchase_date" : "2022-09-09T09:09:09Z",
         "ownership_type" : "PURCHASED",
@@ -47,7 +47,7 @@ chxm1023 = {
     },
     "entitlements" : {
       "pro" : {
-        "wechat" : "chxm1023",
+        "wechat" : "yahe1023",
         "ownership_type" : "PURCHASED",
         "product_identifier" : "yearly_sub_pro",
         "expires_date" : "2099-09-09T09:09:09Z",
@@ -62,4 +62,4 @@ chxm1023 = {
   }
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -2,9 +2,9 @@
 
 项目名称：Vista看天下
 下载地址：https://t.cn/A6ORUIIv
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,7 +17,7 @@ hostname = open3.vistastory.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const subscription = {      "userId" : 666666,      "beginTime" : 1666666666666,      "id" : 188888,      "endTime" : 4092599349000,      "createTimeFormat" : "2022-10-25 10:57:46",      "createTime" : 1666666666666,      "isActive" : 1    };
 
 const vipa = '/api/vip';
@@ -46,22 +46,22 @@ if ($request.url.indexOf(vipb) != -1){
   chxm1023["isVip"] = 1;
   chxm1023["level"] = 99;
   chxm1023["exp"] = 0;
-  chxm1023["info"] = "叮当猫の分享频道:@chxm1023";
+  chxm1023["info"] = "YaHee, Studio.:@chxm1023";
 }
 
 if ($request.url.indexOf(guashi) != -1){
-  chxm1023.userLevel = 99;
-  chxm1023.status = 1;
-  chxm1023.msg = "success";
-  if(chxm1023.pendantList && Array.isArray(chxm1023.pendantList)) {
-    chxm1023.pendantList.forEach(item => {
+  yahe1023.userLevel = 99;
+  yahe1023.status = 1;
+  yahe1023.msg = "success";
+  if(yahe1023.pendantList && Array.isArray(yahe1023.pendantList)) {
+    yahe1023.pendantList.forEach(item => {
       item.level = 1;
     });
   }
 }
 
 if ($request.url.indexOf(yaoqing) != -1){
-  chxm1023.posterList = [
+  yahe1023.posterList = [
     {
       "status" : 1,
       "id" : 6,
@@ -71,15 +71,15 @@ if ($request.url.indexOf(yaoqing) != -1){
       "position" : 0
     }
   ];
-  chxm1023.inviteUrl = "https://t.me/chxm1023"
+  yahe1023.inviteUrl = "https://yaheex.github.io"
 }
 
 if ($request.url.indexOf(popup) != -1){
-  delete chxm1023.popup;
+  delete yahe1023.popup;
 }
 
 if ($request.url.indexOf(ad) != -1){
-  delete chxm1023.ad;
+  delete yahe1023.ad;
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

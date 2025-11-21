@@ -2,7 +2,7 @@
 
 项目名称：Pandora-管理订阅
 下载地址：https://t.cn/A6SijIXp
-
+使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = buy.itunes.apple.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-    chxm1023 = {
+    yahe1023 = {
   "receipt" : {
     "receipt_type" : "Production",
     "app_item_id" : 1470560916,
@@ -46,4 +46,4 @@ var chxm1023 = JSON.parse($response.body);
   "environment" : "Production"
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

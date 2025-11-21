@@ -3,9 +3,9 @@
 项目名称：Moises-音乐人应用
 下载地址：https://t.cn/A6pzDxjh
 更新日期：2024-10-13
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,13 +18,13 @@ hostname = api.moises.ai
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data.user.subscription = {
-  ...chxm1023.data.user.subscription,
+yahe1023.data.user.subscription = {
+  ...yahe1023.data.user.subscription,
   "isPremium": true,
   "details": {
-    ...chxm1023.data.user.subscription.details,
+    ...yahe1023.data.user.subscription.details,
     "providerGateway": "Apple Pay",
     "providerName": "Apple Subscription Service",
     "planCycle": "lifetime"
@@ -36,4 +36,4 @@ chxm1023.data.user.subscription = {
   "__typename": "UserSubscription"
 };
 
-$done({ body: JSON.stringify(chxm1023) });
+$done({ body: JSON.stringify(yahe1023) });

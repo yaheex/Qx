@@ -2,6 +2,7 @@
 
 项目名称：倒数纪念日 解锁终身会员
 下载地址：https://t.cn/A6t6nFst
+使用声明：仅供学习与交流，请勿转载与贩卖！⚠️
 
 **************************************
 
@@ -16,13 +17,13 @@ hostname = day-api.xixitime.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const user = '/user/info';
 const vip = '/vip/state';
 
 if ($request.url.indexOf(user) != -1){
-chxm1023.data["foreverVip"] = true;
-chxm1023.data["vipInfo"] = {
+yahe1023.data["foreverVip"] = true;
+yahe1023.data["vipInfo"] = {
       "vipExpireTime" : 4092599349000,
       "trialPeriod" : true,
       "canUseTrialPeriod" : false,
@@ -44,4 +45,4 @@ chxm1023["data"] = {
   };
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

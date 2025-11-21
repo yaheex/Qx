@@ -3,9 +3,9 @@
 项目名称：追书神器
 下载地址：https://t.cn/A6Nm0RuT
 更新日期：2024-05-12
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 效果说明：付费内容未解锁，解锁听书/去广告
 
 **************************************
@@ -30,27 +30,27 @@ hostname = *.zhuishushenqi.com, *.pangolin-sdk-toutiao*.com, mhjk.1391.com, open
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const vipa = /judgeSignIn/;
 const vipb = /pay\/products/;
 const user = /account/;
 const yuyin = /charge\/voice\/state/;
 
 if(vipa.test($request.url)){
-  chxm1023.days = 99999;
-  chxm1023.date = "2099-09-09";
+  yahe1023.days = 99999;
+  yahe1023.date = "2099-09-09";
 }
 
 if(vipb.test($request.url)){
-  chxm1023.isVip = true;
+  yahe1023.isVip = true;
 }
 
 if(/(push\/pop-config|sfo\/(popup_displays|user_popup_configs)|video\/adConfig|book\/(bookshelf-recommend.*|bookshelf-top-recommend|recommend-pop)|activity\/popup\/scenes\/init|advert_center\/(advert_list|switch_config))/.test($request.url)){
-  chxm1023 = {};
+  yahe1023 = {};
 };
 
 if(user.test($request.url)){
-  chxm1023 = {
+  yahe1023 = {
     ...chxm1023,
     "isFree" : true,
     "time" : 4092599349,
@@ -68,7 +68,7 @@ if(user.test($request.url)){
 }
 
 if(yuyin.test($request.url)){
-  chxm1023 = {
+  yahe1023 = {
     "state" : {
       "voiceExpire" : 4092599349,
       "isFree" : true,
@@ -79,4 +79,4 @@ if(yuyin.test($request.url)){
   };
 }
 
-$done({body: JSON.stringify(chxm1023)});
+$done({body: JSON.stringify(yahe1023)});

@@ -2,9 +2,9 @@
 
 项目名称：潮汐
 下载地址：https://t.cn/A6NdGzH4
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,7 +17,7 @@ hostname = tide-api.moreless.io
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
 chxm1023["vip"] = {
     "expired_at" : 4092599349,
@@ -29,4 +29,4 @@ chxm1023["vip"] = {
     "premium_type" : 2
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

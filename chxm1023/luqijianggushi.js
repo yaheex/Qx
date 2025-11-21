@@ -2,9 +2,9 @@
 
 项目名称：陆琪讲故事
 下载地址：https://t.cn/A6WinsEM
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -26,6 +26,6 @@ body = body.replace(/\"expiretime":\d+/g, '\"expiretime":4092599349');
 body = body.replace(/\"expires_in":\d+/g, '\"expires_in":4092599349');
 body = body.replace(/\"vip_endtime":\d+/g, '\"vip_endtime":4092599349');
 body = body.replace(/\"avatar":".*?"/g, '\"avatar":"https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/dlam.png"');
-body = body.replace(/\"theme_content":".*?"/g, '\"theme_content":"叮当猫の分享频道 || 已解锁所有节目🎉 || ⚠️仅供参考，🈲转载与售卖！|| ——谢谢合作"');
+body = body.replace(/\"theme_content":".*?"/g, '\"theme_content":"YaHee, Studio. || 已解锁所有节目🎉 || ⚠️仅供参考，🈲转载与售卖！|| ——谢谢合作"');
 
 $done({body});

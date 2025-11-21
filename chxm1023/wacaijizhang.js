@@ -3,9 +3,9 @@
 项目名称：挖财记账
 下载地址：https://t.cn/A6SkblaQ
 更新日期：2024-07-08
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,13 +18,13 @@ hostname = jz.wacaijizhang.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const my = /api\/my\/v\d/;
 const vip = /(vipmember\/v\d\/index|jz-activity\/bkk-frontier\/api\/vipmember\/v\d\/index)/;
 const user = /usercenter\/userInfo/;
 
 if(my.test($request.url)){
-  chxm1023.data.vipInfo = {
+  yahe1023.data.vipInfo = {
     "vipMemberType" : "挖财记账超级年会员",
     "isVipMember" : true,
     "expirationDate" : 4092599349000,
@@ -35,8 +35,8 @@ if(my.test($request.url)){
 }
 
 if(vip.test($request.url)){
-  chxm1023.data.vipInfo = {
-    ...chxm1023.data.vipInfo,
+  yahe1023.data.vipInfo = {
+    ...yahe1023.data.vipInfo,
     "adFreeVipEnable" : 1,
     "adFreePermanentVip" : true,
     "vipMemberEnable" : 1,
@@ -54,7 +54,7 @@ if(vip.test($request.url)){
 }
 
 if(user.test($request.url)){
-  chxm1023.data.isVip = 1;
+  yahe1023.data.isVip = 1;
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

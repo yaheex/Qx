@@ -3,9 +3,9 @@
 项目名称：爱涂绘画
 下载地址：https://t.cn/A6OlvCzI
 更新日期：2025-01-08
+脚本作者：@yahe1023
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,9 +18,9 @@ hostname = kkr-user.tapque.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "msg" : "处理完成",
   "records" : {
     "isVipValue" : true,
@@ -29,4 +29,4 @@ chxm1023 = {
   "code" : 6000
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

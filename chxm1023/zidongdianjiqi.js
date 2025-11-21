@@ -2,8 +2,8 @@
 
 项目名称：自动点击器-Auto Clicker
 下载工具：https://t.cn/A6NIJZK9
-
-
+脚本作者：YaHee,
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 *****************************************
 
@@ -16,9 +16,9 @@ hostname = api.revenuecat.com
 ****************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "request_date_ms" : 1681814039434,
   "request_date" : "2023-04-18T10:33:59Z",
   "subscriber" : {
@@ -61,4 +61,4 @@ chxm1023 = {
   }
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

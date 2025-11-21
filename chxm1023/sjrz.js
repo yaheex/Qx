@@ -3,9 +3,9 @@
 项目名称：时间日志
 下载地址：https://t.cn/A6QSJY0L
 更新日期：2024-06-27
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,8 +18,8 @@ hostname = liujia95.xyz
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.body.vipType = 4;
+yahe1023.body.vipType = 4;
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

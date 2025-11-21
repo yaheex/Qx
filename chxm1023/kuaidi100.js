@@ -3,9 +3,9 @@
 项目名称：快递100收件
 下载地址：https://t.cn/A6Ez6yMk
 更新日期：2024-09-20
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,25 +18,25 @@ hostname = *.kuaidi100.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
 if(/advertisement/.test($request.url)){
-  chxm1023.data = {};
+  yahe1023.data = {};
 }
 
 if (/getLoginInfo/i.test($request.url)) {
-  chxm1023.data = {
-   ...chxm1023.data,
+  yahe1023.data = {
+   ...yahe1023.data,
     "vipTag": "VIP",
     "vipDeadline": 4092599349000
   };
-  chxm1023.vipTag = "VIP";
-  chxm1023.vipDeadline = 4092599349000;
+  yahe1023.vipTag = "VIP";
+  yahe1023.vipDeadline = 4092599349000;
 }
 
 if (/getMyVip/.test($request.url)) {
-  chxm1023.data = {
-   ...chxm1023.data,
+  yahe1023.data = {
+   ...yahe1023.data,
     "vipTag": "VIP",
     "expired": 0,
     "vipTimeDetail": {
@@ -46,8 +46,8 @@ if (/getMyVip/.test($request.url)) {
     },
     "vipDeadline": 4092599349000
   };
-  if (chxm1023.data.serviceList && Array.isArray(chxm1023.data.serviceList)) {
-    chxm1023.data.serviceList.forEach((item) => {
+  if (yahe1023.data.serviceList && Array.isArray(yahe1023.data.serviceList)) {
+    yahe1023.data.serviceList.forEach((item) => {
       if ('endTime' in item) {
         item.endTime = 4092599349000;
       }
@@ -56,7 +56,7 @@ if (/getMyVip/.test($request.url)) {
 }
 
 if(/getAllPaidService/.test($request.url)){
-  chxm1023.data = {
+  yahe1023.data = {
     "CAINIAOBLUETOOTHPRINTING" : 4092599349000,
     "BATCHADDNEW" : 4092599349000,
     "EXPEXPORT" : 4092599349000,
@@ -73,4 +73,4 @@ if(/getAllPaidService/.test($request.url)){
   };
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

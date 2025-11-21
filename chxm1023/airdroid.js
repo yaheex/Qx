@@ -4,9 +4,9 @@
 下载地址：https://t.cn/A6TYOPUL
 数据来源：@David_Hex01
 更新日期：2025-01-08
+脚本作者：@yahe1023
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -19,13 +19,13 @@ hostname = *.airdroid.cn
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const vip = /cast\/getUserPaymentInfo/;
 const user = /user\/getuserinfo/;
 
 if(vip.test($request.url)){
-  chxm1023.data = {
-    ...chxm1023.data,
+  yahe1023.data = {
+    ...yahe1023.data,
     "next_order_level": 2,
     "has_pay": 1,
     "subscription_fee_mode_id": 400081,
@@ -53,8 +53,8 @@ if(vip.test($request.url)){
 }
 
 if(user.test($request.url)){
-  chxm1023.data = {
-    ...chxm1023.data,
+  yahe1023.data = {
+    ...yahe1023.data,
     "vip" : 1,
     "isPremium" : 1,
     "vip_starttime" : "2023-09-09 09:09:09",
@@ -63,4 +63,4 @@ if(user.test($request.url)){
   };
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

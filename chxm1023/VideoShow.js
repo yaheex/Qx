@@ -8,9 +8,9 @@
 下载地址：https://t.cn/A6p7XAT4
 项目名称：多功能视频剪辑
 下载地址：https://t.cn/A6p7XyPT
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -23,7 +23,7 @@ hostname = *.videoshowiosglobalserver.com, *.enjoy-mobi.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const ad = '/startPageAd/getAds';
 const vipa = '/payVerify';
@@ -31,7 +31,7 @@ const vipb = '/imeiVerify';
 
 //去除乐秀开屏
 if ($request.url.indexOf(ad) != -1){
-  chxm1023 = {};
+  yahe1023 = {};
 }
 
 //录屏
@@ -64,7 +64,7 @@ if (ua.indexOf('多功能视频剪辑') != -1) {
 
 //会员信息
 if ($request.url.indexOf(vipa) != -1){
-  chxm1023 = {
+  yahe1023 = {
   "expires_date" : (expires),
   "isBlacklist" : "0",
   "retCode" : "1",
@@ -88,7 +88,7 @@ if ($request.url.indexOf(vipa) != -1){
 };}
 
 if ($request.url.indexOf(vipb) != -1){
-  chxm1023 = {
+  yahe1023 = {
   "subscrib_type" : "2",
   "retCode" : 1,
   "current_date" : "2023-05-20 13:14:00",
@@ -112,4 +112,4 @@ if ($request.url.indexOf(vipb) != -1){
   "recallLabelType" : 0
 };}
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

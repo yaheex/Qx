@@ -3,9 +3,9 @@
 项目名称：时光序-日程备忘清单
 下载地址：https://t.cn/A68Fnq52
 更新日期：2024-08-15
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,10 +17,10 @@ hostname = api.weilaizhushou.com
 
 *************************************/
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data = {
-  ...chxm1023.data,
+yahe1023.data = {
+  ...yahe1023.data,
   "isPopupAllLifeVip" : false,
   "vipState" : true,
   "allLifeVip" : true,
@@ -31,4 +31,4 @@ chxm1023.data = {
   "allLifeVipCornerIcon" : null
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -3,9 +3,9 @@
 项目名称：视频&图片编辑套装
 下载地址：https://t.cn/A6Rkno6Y
 更新日期：2024-09-16
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,9 +18,9 @@ hostname = *.vlognow.me
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "msg" : "success",
   "data" : [
     {
@@ -42,4 +42,4 @@ chxm1023 = {
   "code" : 1
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

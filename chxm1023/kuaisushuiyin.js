@@ -3,9 +3,9 @@
 项目名称：快速水印
 下载地址：https://t.cn/A6HjXyiT
 更新日期：2024-05-30
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,10 +18,10 @@ hostname = api-qsy.iiitool.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data = {
-  ...chxm1023.data,
+yahe1023.data = {
+  ...yahe1023.data,
   "is_forever" : true,
   "remaining_times" : 999,
   "vip_level" : 2,
@@ -31,4 +31,4 @@ chxm1023.data = {
   "is_vip" : true
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -2,9 +2,9 @@
 
 项目名称：畅玩空间
 下载地址：https://play.wo1wan.com
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,9 +18,9 @@ hostname = play.wo1wan.com
 
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.info.LevelInfo = {
+yahe1023.info.LevelInfo = {
       "LastTime" : "0001-01-01T00:00:00Z",
       "AllVipXP" : 1,
       "SVipExpires" : "2099-09-09T09:09:09Z",
@@ -35,4 +35,4 @@ chxm1023.info.LevelInfo = {
       "NextLevel" : 999
     };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

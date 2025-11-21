@@ -2,9 +2,9 @@
 
 项目名称：一键扣图
 下载地址：https://t.cn/A6pdVNzJ
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = api.mattingm.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data.expire_at = "2099-09-09 09:09:09";
-chxm1023.data.state = 3;
+yahe1023.data.expire_at = "2099-09-09 09:09:09";
+yahe1023.data.state = 3;
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

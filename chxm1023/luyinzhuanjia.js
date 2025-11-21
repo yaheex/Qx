@@ -3,9 +3,9 @@
 项目名称：录音专家
 下载地址：https://t.cn/A6lWVauX
 更新日期：2023-12-26
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,14 +18,14 @@ hostname = luyintu.cushuikeji.cn
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const user = /tuv2\.user\/info/;
 const scxx = /tuv2\.order\/comboDuration/;
 const ad = /tuv2\.home\/activityAlert/;
 
 if(user.test($request.url)){
-  chxm1023.result = {
-    ...chxm1023.result,
+  yahe1023.result = {
+    ...yahe1023.result,
     "vip_end_time" : 4092599349,
     "vip_try" : 1,
     "is_give_call_duration" : 36000006,
@@ -45,7 +45,7 @@ if(user.test($request.url)){
 }
 
 if(scxx.test($request.url)){
-  chxm1023.result.duration = {
+  yahe1023.result.duration = {
     "vip_duration" : 36000006,
     "total_surplus_duration" : 36000006,
     "vip_surplus_duration" : 36000006,
@@ -55,7 +55,7 @@ if(scxx.test($request.url)){
 }
 
 if(ad.test($request.url)){
-  chxm1023.result = [];
+  yahe1023.result = [];
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -3,9 +3,9 @@
 项目名称：魔音工坊
 下载地址：https://too.st/7Sh
 更新日期：2024-01-30
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,10 +18,10 @@ hostname = moyin-gateway.moyin.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data = {
-   ...chxm1023.data,
+yahe1023.data = {
+   ...yahe1023.data,
    "leftDays" : 99999,
    "isAnnualVip" : true,
    "vipTypeDesc" : "SVIP",
@@ -45,4 +45,4 @@ chxm1023.data = {
    "beginTime" : 1706494224000
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

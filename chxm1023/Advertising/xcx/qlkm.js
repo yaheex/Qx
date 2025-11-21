@@ -2,11 +2,14 @@
 
 项目名称：亲邻开门-AD净化(App+小程序)
 下载地址：https://t.cn/A6o47ShU
+脚本作者：YaHee,
+
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
 [rewrite_local]
-^https:\/\/(qadx.*\.qinlinad|mall-dsp.*\.qinlinkeji)\.com url script-response-body https://raw.githubusercontent.com/yaheex/Qx/main/chxm1023/Advertising/xcx/qlkm.js
+^https:\/\/(qadx.*\.qinlinad|mall-dsp.*\.qinlinkeji)\.com url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/xcx/qlkm.js
 
 [mitm]
 hostname = qadx*.qinlinad.com, mall-dsp*.qinlinkeji.com

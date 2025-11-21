@@ -4,7 +4,7 @@
 下载地址：https://t.cn/A6lxfuhC
 脚本作者：ios151
 
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,12 +17,12 @@ hostname = my.getslopes.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.pass_expiration = 4092599349;
-chxm1023.purchases = 1;
-chxm1023.v1Owner = true;
-chxm1023.pass_ranges = [{
+yahe1023.pass_expiration = 4092599349;
+yahe1023.purchases = 1;
+yahe1023.v1Owner = true;
+yahe1023.pass_ranges = [{
     "is_trial_period": false,
     "end": 4092599349,
     "subscription_origin": "apple",
@@ -30,4 +30,4 @@ chxm1023.pass_ranges = [{
     "start": 1701704386
 }];
 
-$done({ body: JSON.stringify(chxm1023) });
+$done({ body: JSON.stringify(yahe1023) });

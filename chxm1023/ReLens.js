@@ -2,9 +2,9 @@
 
 项目名称：ReLens-相机APP
 下载地址：https://t.cn/A60795Bu
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = buy.itunes.apple.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "status" : 0,
   "receipt" : {
     "receipt_type" : "Production",
@@ -61,7 +61,7 @@ chxm1023 = {
     "original_application_version" : "98",
     "download_id" : 666666666666666600
   },
-  "Author" : "chxm1023",
+  "Author" : "yahe1023",
   "latest_receipt_info" : [
     {
       "quantity" : "1",
@@ -83,7 +83,7 @@ chxm1023 = {
       "original_purchase_date" : "2023-06-06 16:06:07 Etc/GMT"
     }
   ],
-  "latest_receipt" : "chxm1023",
+  "latest_receipt" : "yahe1023",
   "environment" : "Production",
   "pending_renewal_info" : [
     {
@@ -94,7 +94,7 @@ chxm1023 = {
     }
   ],
   "warning" : "仅供学习，禁止转载或售卖",
-  "Telegram" : "https://t.me/chxm1023"
+  "Telegram" : "https://yaheex.github.io"
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

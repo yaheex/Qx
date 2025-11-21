@@ -2,9 +2,9 @@
 
 项目名称：经济学人·商论
 下载地址：https://t.cn/A60bUTVl
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = api.hummingbird.businessreview.global
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "subscription_type" : "Paid",
   "account_member_since" : "Jul 17th, 2023",
   "subscriptions" : [
@@ -59,4 +59,4 @@ chxm1023 = {
   "error" : false
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -4,9 +4,9 @@
 下载地址：https://t.cn/A6o11VGR
 下载地址：https://t.cn/A6NXjTUx
 更新日期：2025-01-09
+脚本作者：@yahe1023
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
  
@@ -23,13 +23,13 @@ var ddm = JSON.parse($response.body);
 
 ddm.data = {
   "exchangeCodeGetTime" : null,
-  "id" : "chxm1023",
+  "id" : "yahe1023",
   "newVipStatus" : 2,
   "endTime" : 2099-09-09,
   "expireDate" : 4092599349,
   "vipStatus" : 1,
-  "sign" : "chxm1023",
-  "nickName" : "chxm1023",
+  "sign" : "yahe1023",
+  "nickName" : "yahe1023",
   "exchangeCode" : null
 };
 

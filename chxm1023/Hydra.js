@@ -2,9 +2,9 @@
 
 项目名称：Hydra相机
 下载地址：https://t.cn/A6OKE5gP
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = creaceed.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "environment" : "Production",
   "receipt" : {
     "receipt_type" : "Production",
@@ -92,7 +92,7 @@ chxm1023 = {
       "original_purchase_date" : "2023-09-14 13:58:15 Etc/GMT"
     }
   ],
-  "latest_receipt" : "chxm1023"
+  "latest_receipt" : "yahe1023"
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

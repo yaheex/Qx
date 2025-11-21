@@ -2,9 +2,9 @@
 
 项目名称：Endel
 下载地址：https://t.cn/A60WXk6k
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = api-production.endel.io
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.subscription = {
+yahe1023.subscription = {
     "promo_type" : "DEFAULT",
     "period" : "YEAR",
     "store_trial" : false,
@@ -35,4 +35,4 @@ chxm1023.subscription = {
     "trial_canceled" : false
   };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

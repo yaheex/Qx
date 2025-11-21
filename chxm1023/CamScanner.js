@@ -2,9 +2,9 @@
 
 项目名称：扫描全能王 解锁黄金会员
 下载地址：https://t.cn/A6ouHe4B
-
+脚本作者：YaHee,
 使用说明：解锁部分功能，使用前先开脚本。
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -19,7 +19,7 @@ hostname = *.camscanner.com, *.intsig.net
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const vipa = '/purchase/cs/query_property';
 const vipb = '/queryProperty';
 const tqzx = '/getPrivilegeItem';
@@ -59,24 +59,24 @@ const vip = {
     };
 
 if ($request.url.indexOf(vipa) != -1){
-chxm1023.data["psnl_vip_property"] = (vip);
-chxm1023.data["fax_balance"] = "99999";
-chxm1023.data["used_points"] = "99999";
-chxm1023.data["points"] = "99999";
-chxm1023.data["pdfword_balance"] = "100010";
-chxm1023.data["bookmode_balance"] = 100010;
-chxm1023.data["immt_expy_points"] = "99999";
-chxm1023.data["ocr_balance"] = 99999;
-chxm1023.data["no_login_ocr_balance"] = "99999";
-chxm1023.data["CamScanner_RoadMap"] = 100000;
+yahe1023.data["psnl_vip_property"] = (vip);
+yahe1023.data["fax_balance"] = "99999";
+yahe1023.data["used_points"] = "99999";
+yahe1023.data["points"] = "99999";
+yahe1023.data["pdfword_balance"] = "100010";
+yahe1023.data["bookmode_balance"] = 100010;
+yahe1023.data["immt_expy_points"] = "99999";
+yahe1023.data["ocr_balance"] = 99999;
+yahe1023.data["no_login_ocr_balance"] = "99999";
+yahe1023.data["CamScanner_RoadMap"] = 100000;
 }
 
 if ($request.url.indexOf(vipb) != -1){
-chxm1023.data.ar_property["psnl_vip_property"] = (vip);
+yahe1023.data.ar_property["psnl_vip_property"] = (vip);
 }
 
 if ($request.url.indexOf(tqzx) != -1){
-chxm1023.data.data = {
+yahe1023.data.data = {
       "document" : [
         {
           "balance" : -1,
@@ -194,5 +194,5 @@ chxm1023.data.data = {
     };
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});
 

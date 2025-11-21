@@ -9,34 +9,34 @@
 hostname = api.rr.tv
 
 # RRTV level_info
-^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/rrtv_json.js
 
 # RRTV 屏蔽软件更新
 ^https?:\/\/api\.rr\.tv\/.*?Version url reject
 
 # RRTV 去除首页广告
-https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/rrtv_json.js
+https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/rrtv_json.js
 
 # RRTV 去除广告tab
-^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/rrtv_json.js
 
 # RRTV 去除商场广告
-^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/rrtv_json.js
 
 # RRTV Ad_List
-^https:\/\/api\.rr\.tv\/user\/privilege\/list url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/rrtv_json.js
+^https:\/\/api\.rr\.tv\/user\/privilege\/list url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/rrtv_json.js
 
 # RRTV Ad_All
-^https:\/\/api\.rr\.tv\/ad\/getAll url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/rrtv_json.js
+^https:\/\/api\.rr\.tv\/ad\/getAll url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/rrtv_json.js
 
 # RRTV Get_Drama
-^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/rrtv_json.js
+^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/rrtv_json.js
 
 # RRTV Watch_V4
-https://api.rr.tv/watch/v4 url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/rrtv_json.js
+https://api.rr.tv/watch/v4 url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/rrtv_json.js
 
 # RRTV User_Info
-https://api.rr.tv/user/profile url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/rrtv_json.js
+https://api.rr.tv/user/profile url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/rrtv_json.js
 
 # RRTV 屏蔽限时弹窗
 https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reject-dict
@@ -91,7 +91,7 @@ const rrtv_level = /.*\/level\/info/;
       case rrtv_tab_my.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
-          obj['data']['sections'] = [{"id":2541,"sectionType":"MAGIC_CUBE","displayTitle":"1","startTime":null,"position":23,"display":"SCROLL","moreText":"","sectionContents":[{"feeMode":null,"pictureHeight":null,"targetId":"rrspjump://webview?url=http%3A%2F%2Fmobile.rr.tv%2FappWeb%2F%23%2FbugList","id":34,"pictureWidth":null,"title":"chxm1023","targetType":"H5","sectionId":2541,"orderNum":1,"subTitle":null,"icon":"http://img.rr.tv/cover/20210201/o_1612169512400.png"},{"feeMode":null,"pictureHeight":null,"targetId":"rrspjump://webview?url=http%3A%2F%2Fmobile.rr.tv%2Fmission%2F%23%2Fachievement%2Fcenter","id":35,"pictureWidth":null,"title":"chxm1023","targetType":"H5","sectionId":2541,"orderNum":2,"subTitle":null,"icon":"http://img.rr.tv/cover/20210201/o_1612169790308.png"},],"endTime":null,"targetType":null,"sequence":3,"name":"其他","targetId":"rrspjump://empty"}];
+          obj['data']['sections'] = [{"id":2541,"sectionType":"MAGIC_CUBE","displayTitle":"1","startTime":null,"position":23,"display":"SCROLL","moreText":"","sectionContents":[{"feeMode":null,"pictureHeight":null,"targetId":"rrspjump://webview?url=http%3A%2F%2Fmobile.rr.tv%2FappWeb%2F%23%2FbugList","id":34,"pictureWidth":null,"title":"yahe1023","targetType":"H5","sectionId":2541,"orderNum":1,"subTitle":null,"icon":"http://img.rr.tv/cover/20210201/o_1612169512400.png"},{"feeMode":null,"pictureHeight":null,"targetId":"rrspjump://webview?url=http%3A%2F%2Fmobile.rr.tv%2Fmission%2F%23%2Fachievement%2Fcenter","id":35,"pictureWidth":null,"title":"yahe1023","targetType":"H5","sectionId":2541,"orderNum":2,"subTitle":null,"icon":"http://img.rr.tv/cover/20210201/o_1612169790308.png"},],"endTime":null,"targetType":null,"sequence":3,"name":"其他","targetId":"rrspjump://empty"}];
           body = JSON.stringify(obj);
         } catch (err) {
           magicJS.logError(`商城去广告出现异常：${err}`);

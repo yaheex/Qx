@@ -3,9 +3,9 @@
 项目名称：白描
 下载地址：https://t.cn/A602ZQ3K
 更新日期：2023-12-05
+脚本作者：@yahe1023
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -27,7 +27,7 @@ if(user.test($request.url)){
   ddm.value = {
     ...ddm.value,
     "largeAvatar" : "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ddm.png",
-    "nickname" : "叮当猫の分享频道",
+    "nickname" : "YaHee, Studio.",
     "smallAvatar" : "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ddm.png",
     "vips" : [Data],
     "id" : 45038072,
@@ -40,10 +40,10 @@ if(user.test($request.url)){
     "fromId" : "000777.aaa111b222c333d444e555f666g777.1023",
     "id" : 102366,
     "expiredTime" : 0,
-    "username" : "叮当猫",
+    "username" : "YaHee,",
     "type" : "apple",
     "toId" : 11223344,
-    "token" : "ddm1023"
+    "token" : "yahe1023"
   }];
   ddm.value.recognize = {
     "remainBatch" : -100,

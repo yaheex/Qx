@@ -2,9 +2,9 @@
 
 项目名称：微信听书
 下载地址：https://t.cn/A6pj4xeR
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = i.at.qq.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "subscriptionPeriod" : 2405400000,
   "memberCount" : 308000,
   "subscriptionPrice" : 99999999,
@@ -37,4 +37,4 @@ chxm1023 = {
   "startTime" : 1666666666
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -2,9 +2,9 @@
 
 项目名称：iLove PDF
 下载地址：https://t.cn/A62Xkhs6
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = service.ilovepdf.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "id": 88846584,
   "name": "Apple",
   "email": "001701.68ecf1bf47734080a0afd313503270a8.0327@apple.com",
@@ -171,4 +171,4 @@ chxm1023 = {
   "certificates_left": 0
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -3,9 +3,9 @@
 项目名称：ELSA Speak
 下载地址：https://t.cn/A6nBWQxQ
 更新日期：2024-11-16
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,10 +18,10 @@ hostname = pool.elsanow.io
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const fixedExpireAt = 4092599349;
 const startAt = Math.floor(Date.now() / 1000);
-const ownerId = chxm1023.tier?.owner_id || "1Aaa2Bbb3Ccc4Ddd5Eee6Fff7Ggg8Hhh";
+const ownerId = yahe1023.tier?.owner_id || "1Aaa2Bbb3Ccc4Ddd5Eee6Fff7Ggg8Hhh";
 
 //计算剩余天数
 function calculateDaysToEnd(expireTimestamp) {
@@ -78,7 +78,7 @@ function generateContents(additionalFields = {}) {
 }
 
 if (/purchase/.test($request.url)) {
-  chxm1023.subscriptions = [
+  yahe1023.subscriptions = [
     {
       "expire_at": "20990909",
       "store": "ios",
@@ -87,14 +87,14 @@ if (/purchase/.test($request.url)) {
       "created_at": "20240909090909"
     }
   ];
-  chxm1023.one_time_products = [
+  yahe1023.one_time_products = [
     "273", "92", "323", "329", "330", "331", "263", "253", "260", "259", 
     "251", "80", "334", "261", "328", "321", "326", "322", "319", "344"
   ].map(createProduct);
 }
 
 if (/entitlement\/api\/v\d\/user\/entitlements/.test($request.url)) {
-  chxm1023.entitlements.memberships = [
+  yahe1023.entitlements.memberships = [
     {
       "credit_total": null,
       "start_at": startAt,
@@ -114,8 +114,8 @@ if (/entitlement\/api\/v\d\/user\/entitlements/.test($request.url)) {
       "owner_id": ownerId
     }
   ];
-  if (Array.isArray(chxm1023.entitlements.features)) {
-    chxm1023.entitlements.features.forEach(item => {
+  if (Array.isArray(yahe1023.entitlements.features)) {
+    yahe1023.entitlements.features.forEach(item => {
       if ('credit_total' in item && 'start_at' in item && 'owner_id' in item) {
         item.credit_total = 999;
         item.start_at = startAt;
@@ -123,15 +123,15 @@ if (/entitlement\/api\/v\d\/user\/entitlements/.test($request.url)) {
       }
     });
   }
-  chxm1023.entitlements.contents = generateContents();
-  chxm1023.tier = {
+  yahe1023.entitlements.contents = generateContents();
+  yahe1023.tier = {
     "code": "premium",
     "expire_at": fixedExpireAt,
     "owner_id": ownerId,
     "owner_type": "individual",
     "start_at": startAt
   };
-  chxm1023.transactions = [
+  yahe1023.transactions = [
     {
       "store": "ios",
       "order_id": "GPA.3381-5386-9184-26994",
@@ -146,7 +146,7 @@ if (/entitlement\/api\/v\d\/user\/entitlements/.test($request.url)) {
       "catalog": "premium"
     }
   ];
-  chxm1023.tiers = [
+  yahe1023.tiers = [
     {
       "code": "premium",
       "expire_at": fixedExpireAt,
@@ -157,4 +157,4 @@ if (/entitlement\/api\/v\d\/user\/entitlements/.test($request.url)) {
   ];
 }
 
-$done({ body: JSON.stringify(chxm1023) });
+$done({ body: JSON.stringify(yahe1023) });

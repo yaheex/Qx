@@ -2,6 +2,7 @@
 
 项目名称：得间小说 解锁会员
 下载地址：https://t.cn/A6i8BXBm
+使用声明：仅供学习与交流，请勿转载与贩卖！⚠️
 
 **************************************
 
@@ -16,14 +17,14 @@ hostname = dj.palmestore.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.body.userInfo.unlockVipInfo = {
+yahe1023.body.userInfo.unlockVipInfo = {
         "vipType" : 1,
         "vipExpire" : 4092599349,
         "expireDate" : "2099-09-09"
       };
-chxm1023.body.userInfo.vipInfo = {
+yahe1023.body.userInfo.vipInfo = {
         "content" : "点击进入购买会员",
         "vipType" : 1,
         "expireDate" : "2099-09-09",
@@ -34,4 +35,4 @@ chxm1023.body.userInfo.vipInfo = {
         "vipExpire" : 4092599349};
 
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

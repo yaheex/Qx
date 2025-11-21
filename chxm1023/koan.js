@@ -2,9 +2,9 @@
 
 项目名称：Koan-提问日记
 下载地址：https://t.cn/A6O55spC
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = koan.bopulab.cn
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data["memberCategory"] = 1;
-chxm1023.data["memberExpiredAt"] = "4092599349000";
+yahe1023.data["memberCategory"] = 1;
+yahe1023.data["memberExpiredAt"] = "4092599349000";
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

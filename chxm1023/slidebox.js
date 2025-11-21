@@ -2,9 +2,9 @@
 
 项目名称：Slidebox相册清理
 下载地址：https://too.st/6b4
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = *-slidebox-ios-prod.cloudfunctions.net
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "data" : {
     "env" : {
       "projectId" : "slidebox-ios-prod",
@@ -42,4 +42,4 @@ chxm1023 = {
   }
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

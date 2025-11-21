@@ -6,9 +6,9 @@
 下载地址：https://t.cn/A6OkP7Fd
 下载地址：https://t.cn/A6OkPZhJ
 下载地址：https://t.cn/A6OkPZ3x
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -21,8 +21,8 @@ hostname = water*.yunxiaoguo.cn
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.content.waterVipInfo = {      "beginTime": "2023-09-09 09:09:09",      "createTime": "2023-09-09 09:09:09",      "expireTime": "2099-09-09 09:09:09",      "firstOpenTime": "2023-09-09 09:09:09",      "remainDays": 9999,      "sign": "Goiwv0Gt03s",      "typeName": "终身会员",      "userSign": "chxm1023"    };
+yahe1023.content.waterVipInfo = {      "beginTime": "2023-09-09 09:09:09",      "createTime": "2023-09-09 09:09:09",      "expireTime": "2099-09-09 09:09:09",      "firstOpenTime": "2023-09-09 09:09:09",      "remainDays": 9999,      "sign": "Goiwv0Gt03s",      "typeName": "终身会员",      "userSign": "yahe1023"    };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

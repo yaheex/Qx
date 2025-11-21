@@ -4,9 +4,9 @@
 下载地址：https://t.cn/A6o9s1WB
 版本支持：1.7.3
 更新日期：2023-11-30
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 使用方法：请先登录账号，再开脚本。
 
 **************************************
@@ -21,13 +21,13 @@ hostname = *.soutushenqi.com
 
 
 var body = $response.body;
-var chxm1023 = JSON.parse(body);
+var yahe1023 = JSON.parse(body);
 const user = /account\/(token|info)/;
 const aicl = /cykj_community\/(config\/tools\/.+|ai_draw\/self.+)/;
 const tcad = /home\/dialog/;
 
 if(user.test($request.url)){
-   chxm1023.data = {...chxm1023.data, 
+   yahe1023.data = {...yahe1023.data, 
        "vipPastDueTime" : 4092599349,
        "vipLabelLevel" : 4,
        "vipLabel" : "Lv10元老捐赠会员",
@@ -47,8 +47,8 @@ if(aicl.test($request.url)){
 }
 
 if(tcad.test($request.url)){
-   chxm1023 = {};
+   yahe1023 = {};
 }
 
-body = JSON.stringify(chxm1023)
+body = JSON.stringify(yahe1023)
 $done({body});

@@ -3,9 +3,9 @@
 项目名称：Felo实时翻译
 下载地址：https://t.cn/A6pA5Uiu
 更新日期：2023-12-06
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,9 +18,9 @@ hostname = translator.felo.me
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "status" : 200,
   "data" : {
     "active_time" : "2023-12-05T16:41:31+0000",
@@ -43,4 +43,4 @@ chxm1023 = {
   "code" : "OK"
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

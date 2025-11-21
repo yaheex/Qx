@@ -3,9 +3,9 @@
 项目名称：消考宝-不完整版
 下载地址：https://too.st/bw9
 更新日期：2024-10-21
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -19,7 +19,7 @@ hostname = www.119xkb.com
 
 
 var body = $response.body;
-var chxm1023 = JSON.parse(body);
+var yahe1023 = JSON.parse(body);
 
 if(/theory|index|type|Practical/.test($request.url)){
   body = body.replace(/\"isfree":"\d+"/g, '\"isfree":"0"');
@@ -30,20 +30,20 @@ if(/theory|index|type|Practical/.test($request.url)){
 }
 
 if(/user\/user/.test($request.url)){
-  chxm1023.user.period = "2099-09-09 09:09:09";
-  chxm1023.user.type = 1;
-  chxm1023.user.golds = 1;
-  chxm1023.user.order_date = "2099-09-09 09:09:09"
-  chxm1023.user.recruitment = true;
-  chxm1023.user.catid = "1";
-  body = JSON.stringify(chxm1023);
+  yahe1023.user.period = "2099-09-09 09:09:09";
+  yahe1023.user.type = 1;
+  yahe1023.user.golds = 1;
+  yahe1023.user.order_date = "2099-09-09 09:09:09"
+  yahe1023.user.recruitment = true;
+  yahe1023.user.catid = "1";
+  body = JSON.stringify(yahe1023);
 }
 
 if(/exercise/.test($request.url)){
-  chxm1023.status = "success";
-  chxm1023.message = "获取结果成功";
-  chxm1023.code = 200;
-  body = JSON.stringify(chxm1023);
+  yahe1023.status = "success";
+  yahe1023.message = "获取结果成功";
+  yahe1023.code = 200;
+  body = JSON.stringify(yahe1023);
 }
 
 $done({body});

@@ -2,9 +2,9 @@
 
 项目名称：Mate-翻译神器 解锁订阅
 下载地址：https://t.cn/A69OzKuZ
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 使用方法：先开脚本再开App，失败请重复打开App！
 
 **************************************
@@ -18,7 +18,7 @@ hostname = asia.gikken.co
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const xxa = '/matesync/subscription';
 const xxb = '/matesync/register_user';
 const xxc = '/matesync/login';
@@ -41,17 +41,17 @@ const hyxx = {
 };
 
 if ($request.url.indexOf(xxa) != -1){
-chxm1023 = (hyxx);}
+yahe1023 = (hyxx);}
 
 if ($request.url.indexOf(xxb) != -1){
-chxm1023.subscriptionInfo = (hyxx);}
+yahe1023.subscriptionInfo = (hyxx);}
 
 if ($request.url.indexOf(xxc) != -1){
-chxm1023.subscriptionInfo = (hyxx);}
+yahe1023.subscriptionInfo = (hyxx);}
 
 if ($request.url.indexOf(xxd) != -1){
-chxm1023 = {
+yahe1023 = {
   "registered" : true
 };}
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

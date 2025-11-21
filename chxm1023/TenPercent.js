@@ -3,9 +3,9 @@
 项目名称：TenPercent
 下载地址：https://too.st/71V
 更新日期：2023-12-24
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,10 +18,10 @@ hostname = api.changecollective.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.user = {
-    ...chxm1023.user,
+yahe1023.user = {
+    ...yahe1023.user,
     "subscription_period" : "P1Y",
     "created_at" : "2023-09-09T09:09:09Z",
     "expiration_date" : "09/09/2099, 09:09:00 PM UTC",
@@ -37,4 +37,4 @@ chxm1023.user = {
     "app_onboarding_completed_date" : "09/09/2023"
   };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

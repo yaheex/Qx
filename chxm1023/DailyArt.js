@@ -2,9 +2,9 @@
 
 项目名称：DailyArt(每日艺术)
 下载地址：https://t.cn/A6pv6XfN
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,7 +17,7 @@ hostname = api.getdailyart.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const vipa = '/api/subscription/verified';
 const vipb = '/api/auth/login';
 const vipc = '/api/check-logged';
@@ -31,17 +31,17 @@ const vip = {
   };
 
 if ($request.url.indexOf(vipa) != -1){
-  chxm1023.data = (vip);
+  yahe1023.data = (vip);
 }
 
 if ($request.url.indexOf(vipb) != -1){
-  chxm1023.user.subscription = (vip)
-  chxm1023.user.account_type = "patron-annual";
+  yahe1023.user.subscription = (vip)
+  yahe1023.user.account_type = "patron-annual";
 }
 
 if ($request.url.indexOf(vipc) != -1){
-  chxm1023.subscription = (vip)
-  chxm1023.account_type = "patron-annual";
+  yahe1023.subscription = (vip)
+  yahe1023.account_type = "patron-annual";
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

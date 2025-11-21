@@ -3,9 +3,9 @@
 项目名称：逗逗表情包
 下载地址：https://t.cn/A6T3e0nG
 更新日期：2024-04-25
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,19 +18,19 @@ hostname = www.dbbqb.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const user = /(refresh\/token|login|sms\/register)/;
 const vip = /user\/expire/;
 const vipjl = /orderForm/;
 
 if(user.test($request.url)){
-  chxm1023.score = "999";
-  chxm1023.vip = "true";
-  chxm1023.vipExpireDate = "2099-09-09";
+  yahe1023.score = "999";
+  yahe1023.vip = "true";
+  yahe1023.vipExpireDate = "2099-09-09";
 }
 
 if(vip.test($request.url)){
-  chxm1023 = {
+  yahe1023 = {
     "score" : "999",
     "expire" : "2099-09-09 09:09:09"
   };
@@ -46,4 +46,4 @@ if(vipjl.test($request.url)){
   }];
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -16,9 +16,9 @@
 下载地址：https://t.cn/A6loAsh7
 下载地址：https://t.cn/A6lo2vWo
 更新日期：2023-12-18
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 特别说明：以上下载链接解锁同作者的所有APP
 **************************************
 
@@ -31,13 +31,13 @@ hostname = iosapi.yueshuian.com, question.tiku.cqxcj.top, base.cmoe.top, yyapi.y
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const vipa = /(common|front\/customer)/;
 const vipb = /vip\/getValidTime/;
 
 if(vipa.test($request.url)){
-  chxm1023.data = {
-   ...chxm1023.data,
+  yahe1023.data = {
+   ...yahe1023.data,
    isVip: true,
    vipDueDate: 4092599349,
    vipDueDateStr: "2099-09-09 09:09:09",
@@ -46,8 +46,8 @@ if(vipa.test($request.url)){
 }
 
 if(vipb.test($request.url)){
-  chxm1023.VaildEndTime = "2099-09-09 09:09:09";
-  chxm1023.Status = 1;
+  yahe1023.VaildEndTime = "2099-09-09 09:09:09";
+  yahe1023.Status = 1;
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

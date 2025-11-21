@@ -2,7 +2,7 @@
 
 项目名称：PhotoSlip-照片清理大师
 下载地址：https://t.cn/A6XMsIv7
-
+使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = www2.tigeroom.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "message" : "",
   "data" : {
     "phone" : null,
@@ -37,4 +37,4 @@ chxm1023 = {
 };
 
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

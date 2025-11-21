@@ -3,9 +3,9 @@
 项目名称：PhotoDance
 下载地址：https://t.cn/A6HK65UJ
 更新日期：2024-05-24
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,13 +18,13 @@ hostname = viart-api.afunapp.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data = {
-  ...chxm1023.data,
+yahe1023.data = {
+  ...yahe1023.data,
   "vip_remain_time" : 4092599349,
   "vip_type" : 1,
   "vip_year" : 1
 },
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

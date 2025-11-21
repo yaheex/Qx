@@ -2,9 +2,9 @@
 
 项目名称：Splice
 下载地址：https://t.cn/A600fE6J
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -24,4 +24,4 @@ chxm1023["me"]["active_bundle_subscriptions"] = [{
    "features" : ["unlock"]
   }];
 chxm1023["settings"]["__identity__"]["expiration"] = "2099-09-09T09:09:09+00:00";
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

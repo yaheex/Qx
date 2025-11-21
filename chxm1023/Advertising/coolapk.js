@@ -1,12 +1,13 @@
 /*
 version     v0.0.1
 updatetime  2022-11-04
+tgchannel   https://t.me/ddgksf2021
 function    酷安去首页广告、信息流广告、评论广告
 author      kk pp
 
 
 [rewrite_local]
-^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/coolapk.js
+^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/coolapk.js
 
 [mitm]
 hostname = api.coolapk.com

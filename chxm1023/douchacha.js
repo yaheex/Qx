@@ -2,9 +2,9 @@
 
 项目名称：抖查查-直播短视频电商数据
 下载地址：https://t.cn/A6Nq76Nh
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,28 +18,28 @@ hostname = api.douchacha.com
 
 
 var body = $response.body;
-var chxm1023 = JSON.parse(body);
+var yahe1023 = JSON.parse(body);
 
 const vipa = '/user/info';
 const vipb = '/order/get_info';
 
 if ($request.url.indexOf(vipa) != -1){
-  chxm1023.data.grade_info = {
+  yahe1023.data.grade_info = {
       "paused_day" : 0,
       "current_day" : 99999,
       "current_grade" : "EVIP",
       "current_grade_expire_time" : "4092599349000",
       "service_time" : "1666666666666"
     };
-  chxm1023.data.permission_range = [
+  yahe1023.data.permission_range = [
       "1666666666666",
       "4092599349000"
     ];
-  chxm1023.data.grade = "EVIP";
+  yahe1023.data.grade = "EVIP";
 }
 
 if ($request.url.indexOf(vipb) != -1){
-  chxm1023.data.user_grade_packages= [
+  yahe1023.data.user_grade_packages= [
       {
         "subscribe_activity_start_time" : "0",
         "activity_end_time" : "4092599349000",
@@ -82,4 +82,4 @@ if ($request.url.indexOf(vipb) != -1){
     ];
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

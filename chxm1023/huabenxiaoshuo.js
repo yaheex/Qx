@@ -2,9 +2,9 @@
 
 项目名称：话本小说
 下载地址：2023-12-15
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,7 +17,7 @@ hostname = *.ihuaben.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const user = /api\/userinfo/;
 const yuedu = /book\/app\/vipReadWaitSeconds/;
 const authorinfo = /function\/bookservice\/authorInfo/;
@@ -33,17 +33,17 @@ if(user.test($request.url)){
 }
 
 if(yuedu.test($request.url)){
-   chxm1023.hpFee = 1;
-   chxm1023.isDimeMemberExperinceAvailable = true;
+   yahe1023.hpFee = 1;
+   yahe1023.isDimeMemberExperinceAvailable = true;
 }
 
 if(authorinfo.test($request.url)){
-   chxm1023.authorInfo["userStatus"] = 1;
-   chxm1023.authorInfo["isMember"] = true;
+   yahe1023.authorInfo["userStatus"] = 1;
+   yahe1023.authorInfo["isMember"] = true;
 }
 
 if(book.test($request.url)){
-   chxm1023.book.marks.isMember = true;
+   yahe1023.book.marks.isMember = true;
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

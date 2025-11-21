@@ -2,9 +2,9 @@
 
 项目名称：Hyperweb Safari浏览器扩展
 下载地址：https://t.cn/A60JTajr
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = zy6kcqa01a.execute-api.us-east-2.amazonaws.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "autoRenewStatus" : "1",
   "isActive" : true,
   "expireDateMs" : 4092599349000,
@@ -27,4 +27,4 @@ chxm1023 = {
   "productId" : "ai.laso.ios.HyperWeb.yearly.subscription"
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

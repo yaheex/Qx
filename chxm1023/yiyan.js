@@ -2,9 +2,9 @@
 
 项目功能：一言 解锁会员/净化广告
 下载地址：https://t.cn/Aini0veg
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,4 +17,4 @@ hostname = app.yiyan.art
 *************************************/
 
 
-var chxm1023 = $response.body.replace(/viptype":"\d+"/g, 'viptype":"4"').replace(/banner":\[.+\]/g, 'banner":[]');$done(chxm1023);
+var yahe1023 = $response.body.replace(/viptype":"\d+"/g, 'viptype":"4"').replace(/banner":\[.+\]/g, 'banner":[]');$done(yahe1023);

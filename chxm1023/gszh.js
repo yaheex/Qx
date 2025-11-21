@@ -2,9 +2,9 @@
 
 项目名称：格式转换
 下载地址：https://t.cn/A6KtskIp
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,10 +18,10 @@ hostname = format-api.netpock.com
 
 
 var body = $response.body;
-var chxm1023 = JSON.parse(body);
+var yahe1023 = JSON.parse(body);
 
-chxm1023.data.is_vip = true;
-chxm1023.data.wps_size = 999;
-chxm1023.data.vip_expiration_time = 4092599350;
+yahe1023.data.is_vip = true;
+yahe1023.data.wps_size = 999;
+yahe1023.data.vip_expiration_time = 4092599350;
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

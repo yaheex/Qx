@@ -3,9 +3,9 @@
 项目名称：秒解析
 下载地址：https://too.st/94O
 更新日期：2024-03-30
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -34,8 +34,8 @@ data[0].qixian = "永久免除所有广告";
 responseData = JSON.stringify({ data: data });
 
 //更新原始数据
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data.response_data = responseData;
+yahe1023.data.response_data = responseData;
 
-$done({ body: JSON.stringify(chxm1023) });
+$done({ body: JSON.stringify(yahe1023) });

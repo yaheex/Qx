@@ -2,9 +2,9 @@
 
 项目名称：极速汇率
 下载地址：https://t.cn/A6ckbDYO
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = explorer.tratao.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "status": "1",
   "data": [{
     "created": "2022-12-29 11:14:26",
@@ -37,5 +37,5 @@ chxm1023 = {
   }]
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});
 

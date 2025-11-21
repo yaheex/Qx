@@ -3,9 +3,9 @@
 项目名称：SODA-相机
 下载地址：https://too.st/91w
 更新日期：2024-03-26
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,9 +18,9 @@ hostname = purchase-soda-api.snow.me
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.result = {
+yahe1023.result = {
   "products" : [
     {
       "managed" : false,
@@ -33,4 +33,4 @@ chxm1023.result = {
   "activated" : true
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

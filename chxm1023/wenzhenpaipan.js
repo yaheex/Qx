@@ -2,9 +2,9 @@
 
 项目名称：问真排盘
 下载地址：https://too.st/5tQ
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,13 +17,13 @@ hostname = bzpp2.iwzbz.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.isSuccess = true;
-chxm1023.validateKey = "chxm1023";
-chxm1023.data = {
+yahe1023.isSuccess = true;
+yahe1023.validateKey = "yahe1023";
+yahe1023.data = {
     "expires" : "2099-09-09 09:09:09",
     "vipLevel" : 3
   };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

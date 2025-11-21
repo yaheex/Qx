@@ -2,7 +2,7 @@
 
 项目名称：VN-视频剪辑
 下载地址：https://t.cn/A6f4hPxo
-
+使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = api2.vlognow.me
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-    chxm1023 = {
+    yahe1023 = {
   "msg" : "success",
   "data" : [
     {
@@ -43,4 +43,4 @@ var chxm1023 = JSON.parse($response.body);
 
 
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -2,9 +2,9 @@
 
 项目功能：Picsart美易
 下载地址：https://t.cn/A6MxZ5q1
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = api.meiease.cn
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "status" : "success",
   "response" : [
     {
@@ -56,4 +56,4 @@ chxm1023 = {
   ]
 };
 
-$done({body: JSON.stringify(chxm1023)});
+$done({body: JSON.stringify(yahe1023)});

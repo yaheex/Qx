@@ -2,6 +2,9 @@
 
 项目名称：555电影-去广告
 下载地址：https://555dyy.top
+脚本作者：YaHee,
+
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -16,9 +19,9 @@ hostname = a.weilai555.com, app-v1.ecoliving168.com, vpic.cms.qq.com
 
 
 var body = $response.body;
-var chxm1023 = JSON.parse(body);
+var yahe1023 = JSON.parse(body);
 
-function recursiveRemoval(chxm1023) {
+function recursiveRemoval(yahe1023) {
     for (let key in chxm1023) {
         if (typeof(chxm1023[key]) === 'object') {
             if ('layout' in chxm1023[key] && chxm1023[key]['layout'] === 'advert_self') {
@@ -30,7 +33,7 @@ function recursiveRemoval(chxm1023) {
     }
 }
 
-recursiveRemoval(chxm1023);
+recursiveRemoval(yahe1023);
 
-body = JSON.stringify(chxm1023);
+body = JSON.stringify(yahe1023);
 $done({body});

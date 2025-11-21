@@ -17,9 +17,9 @@ hostname = api.revenuecat.com
 ****************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "request_date_ms" : 1675774447396,
   "request_date" : "2023-02-07T12:54:07Z",
   "subscriber" : {
@@ -38,19 +38,19 @@ chxm1023 = {
     "subscriptions" : {
       "app.ft.Bookkeeping.lifetime" : {
         "warning" : "仅供学习，禁止转载或售卖",
-        "wechat" : "chxm1023",
+        "wechat" : "yahe1023",
         "purchase_date" : "2022-09-09T09:09:09Z",
         "original_purchase_date" : "2022-09-09T09:09:09Z",
-        "feedback" : "chxm1023",
+        "feedback" : "yahe1023",
         "ownership_type" : "PURCHASED"
       }
     },
     "entitlements" : {
       "allaccess" : {
-        "wechat" : "chxm1023",
+        "wechat" : "yahe1023",
         "ownership_type" : "PURCHASED",
         "product_identifier" : "app.ft.Bookkeeping.lifetime",
-        "feedback" : "chxm1023",
+        "feedback" : "yahe1023",
         "warning" : "仅供学习，禁止转载或售卖",
         "original_purchase_date" : "2022-09-09T09:09:09Z",
         "purchase_date" : "2022-09-09T09:09:09Z"
@@ -62,4 +62,4 @@ chxm1023 = {
   }
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

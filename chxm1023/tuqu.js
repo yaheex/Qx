@@ -3,9 +3,9 @@
 项目名称：图趣AI
 下载地址：https://t.cn/A6WxvZTU
 更新日期：2024-04-02
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,9 +18,9 @@ hostname = meitu.minecaller.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   ...chxm1023,
   "chargePoint" : 999,
   "diamonds" : 9999,
@@ -33,4 +33,4 @@ chxm1023 = {
   "raffleCount" : 99
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

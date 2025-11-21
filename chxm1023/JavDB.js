@@ -3,9 +3,9 @@
 项目名称：JavDB-净化/解锁VIP
 下载地址：https://javdb008.com
 更新日期：2024-07-30
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -19,38 +19,38 @@ hostname = api.hechuangxinxi.xyz
 *************************************/
 
 
-const chxm1024 = {};
+const yahe1024 = {};
 const url = $request.url;
-const chxm1023 = JSON.parse(typeof $response != "undefined" && $response.body || null);
+const yahe1023 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 
 if (typeof $response == "undefined") {
   //const headers = $request.headers;
   //headers["authorization"] = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MzU4NDg3NywidXNlcm5hbWUiOiJjaHhtMTAyNCJ9.RI3cy6hTiFd7NgzDxN8UJwWlCQEJtGGxqRryWW8jr-w";
-  //chxm1024.headers = headers;
+  //yahe1024.headers = headers;
 } else {
   if(/users/.test(url)){
-    chxm1023.data.user = Object.assign({}, chxm1023.data.user, {
+    yahe1023.data.user = Object.assign({}, yahe1023.data.user, {
       "promotion_days" : 9999,
       "vip_expired_at" : "2099-09-09T09:09:09.000+09:00",
       "is_vip" : true
     });
-    chxm1023.banner_type = "payment";
+    yahe1023.banner_type = "payment";
   }
   if(/startup/.test(url)){
-    chxm1023.data.splash_ad = {
+    yahe1023.data.splash_ad = {
       "enabled" : false,
       "overtime" : 0,
       "ad" : null
     };
-    chxm1023.data.settings.UPDATE_DESCRIPTION = "";
-    chxm1023.data.settings.NOTICE = "";
-    chxm1023.data.feedback.placeholder = "";
+    yahe1023.data.settings.UPDATE_DESCRIPTION = "";
+    yahe1023.data.settings.NOTICE = "";
+    yahe1023.data.feedback.placeholder = "";
   }
   if(/ads/.test(url)){
-    chxm1023.data.enabled = false;
-    chxm1023.data.ads = {};
+    yahe1023.data.enabled = false;
+    yahe1023.data.ads = {};
   }
-  chxm1024.body = JSON.stringify(chxm1023);
+  yahe1024.body = JSON.stringify(yahe1023);
 }
 
-$done(chxm1024);
+$done(yahe1024);

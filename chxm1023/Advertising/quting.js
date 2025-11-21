@@ -2,12 +2,15 @@
 
 项目功能：趣听音乐馆
 功能说明：屏蔽弹窗/首页横幅
+脚本作者：YaHee,
+
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 *****************************************
 
             
 [rewrite_local]
-^https?:\/\/(api|api\.next)\.bspapp\.com\/client$ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/quting.js
+^https?:\/\/(api|api\.next)\.bspapp\.com\/client$ url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/quting.js
 
 [mitm]
 hostname = api.bspapp.com, api.next.bspapp.com

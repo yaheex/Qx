@@ -2,9 +2,9 @@
 
 项目名称：极简扫描
 下载地址：https://t.cn/A6KJaeDD
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -16,9 +16,9 @@ hostname = cn.czur.cc
 
 *************************************/
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "msg" : "Success",
   "body" : {
     "vipStartOn" : null,
@@ -59,7 +59,7 @@ chxm1023 = {
   "code" : 1000
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});
 
 
 

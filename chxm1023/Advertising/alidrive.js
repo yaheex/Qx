@@ -3,7 +3,7 @@
 [rewrite_local]
 
 # 阿里云盘-优化首页display
-^https?:\/\/api\.aliyundrive\.com\/apps\/v\d\/users\/apps\/widgets$ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/alidrive.js
+^https?:\/\/api\.aliyundrive\.com\/apps\/v\d\/users\/apps\/widgets$ url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/alidrive.js
 
 [mitm]
 
@@ -11,8 +11,8 @@ hostname = api.aliyundrive.com
 
 ****************************************/
 
-let chxm1023 = JSON.parse($response.body);
-if (chxm1023.result) {
-    chxm1023.result = Object.values(chxm1023.result).filter(item => (item["appCode"]=="file" || item["appCode"]=="video"));
+let yahe1023 = JSON.parse($response.body);
+if (yahe1023.result) {
+    yahe1023.result = Object.values(yahe1023.result).filter(item => (item["appCode"]=="file" || item["appCode"]=="video"));
 }
-$done({ body: JSON.stringify(chxm1023)});
+$done({ body: JSON.stringify(yahe1023)});

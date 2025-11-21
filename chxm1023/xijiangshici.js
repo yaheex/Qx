@@ -2,8 +2,8 @@
 
 项目名称：西江诗词 解锁高级版
 下载工具：https://t.cn/A6CFTG1l
-
-
+脚本作者：YaHee,
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 *****************************************
 
@@ -16,9 +16,9 @@ hostname = api.revenuecat.com
 ****************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "request_date_ms" : 1680071100255,
   "request_date" : "2023-03-29T06:25:00Z",
   "subscriber" : {
@@ -39,7 +39,7 @@ chxm1023 = {
     "subscriptions" : {
       "com.uzero.poem.month1" : {
         "warning" : "仅供学习，禁止转载或售卖",
-        "wechat" : "chxm1023",
+        "wechat" : "yahe1023",
         "purchase_date" : "2022-09-09T09:09:09Z",
         "original_purchase_date" : "2022-09-09T09:09:09Z",
         "ownership_type" : "PURCHASED",
@@ -48,7 +48,7 @@ chxm1023 = {
     },
     "entitlements" : {
       "Pro Access" : {
-        "wechat" : "chxm1023",
+        "wechat" : "yahe1023",
         "ownership_type" : "PURCHASED",
         "product_identifier" : "com.uzero.poem.month1",
         "expires_date" : "2099-09-09T09:09:09Z",
@@ -63,4 +63,4 @@ chxm1023 = {
   }
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -3,9 +3,9 @@
 项目名称：糖果壁纸
 下载地址：https://t.cn/A6Wu0rgn
 更新日期：2023-11-19
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,15 +18,15 @@ hostname = w.5hzs.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data.member = {"is_vip" : true};
-chxm1023.data.sex = 1;
-chxm1023.data.type = 1;
-chxm1023.data.command = true;
-chxm1023.data.status = 2;
-chxm1023.data.creator = true;
-chxm1023.data.name = "叮当猫の分享频道";
-chxm1023.data.headimg = "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ddm.png";
+yahe1023.data.member = {"is_vip" : true};
+yahe1023.data.sex = 1;
+yahe1023.data.type = 1;
+yahe1023.data.command = true;
+yahe1023.data.status = 2;
+yahe1023.data.creator = true;
+yahe1023.data.name = "YaHee, Studio.";
+yahe1023.data.headimg = "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ddm.png";
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -1,10 +1,11 @@
 /****************************************
 
 项目功能：酷安去好物推荐
+使用声明：仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
 *****************************************
 
-^https:\/\/api\.coolapk\.com\/v6\/feed\/detail.* url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/KA.js
+^https:\/\/api\.coolapk\.com\/v6\/feed\/detail.* url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/KA.js
 
 hostname=api.coolapk.com
 

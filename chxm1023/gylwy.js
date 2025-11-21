@@ -3,9 +3,9 @@
 项目名称：阳光老挝语
 下载地址：https://t.cn/A6QE9nvI
 更新日期：2024-07-07
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,10 +18,10 @@ hostname = www.ecigrxy.cn
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data = {
-  ...chxm1023.data,
+yahe1023.data = {
+  ...yahe1023.data,
   "videoVip" : true,
   "translateVipDate" : "2099-09-09 09:09:09",
   "translateCount" : "9999",
@@ -30,4 +30,4 @@ chxm1023.data = {
   "translateVip" : true
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

@@ -2,9 +2,9 @@
 
 项目名称：刷刷题
 下载地址：https://t.cn/A60szmtc
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -28,9 +28,9 @@ function deepDelete(chxm1024, propToDelete) {
     }
   }
 }
-var chxm1023 = JSON.parse(body);
+var yahe1023 = JSON.parse(body);
 deepDelete(chxm1023, ['adInfo','defaultAd']);
-body = JSON.stringify(chxm1023);
+body = JSON.stringify(yahe1023);
 
 body = body.replace(/\"state":\d+/g, '\"state":2');
 

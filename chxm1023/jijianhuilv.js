@@ -2,9 +2,9 @@
 
 项目名称：极简汇率
 下载地址：https://too.st/60a
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = xremit.xcurrency.com, explorer.tratao.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023.data = [
+yahe1023.data = [
     {
       "uuid" : "D53A4774-B52D-4B2C-A9EB-2ECAD9999999",
       "id" : "dd9ce407ea984500a65957c2e0659999",
@@ -38,4 +38,4 @@ chxm1023.data = [
     }
   ];
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

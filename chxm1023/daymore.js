@@ -2,9 +2,9 @@
 
 项目名称：DayMore-时尚日记本
 下载地址：https://t.cn/A6OKkFsC
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,9 +17,9 @@ hostname = *.execute-api.ap-northeast-2.amazonaws.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 
-chxm1023 = {
+yahe1023 = {
   "status" : 0,
   "iap_response" : {
     "status" : 0,
@@ -103,4 +103,4 @@ chxm1023 = {
   "result" : 1
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

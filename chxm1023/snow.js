@@ -3,9 +3,9 @@
 项目名称：SNOW-系列解锁
 下载地址：https://t.cn/A6QSe5Tf
 更新日期：2024-12-06
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -18,7 +18,7 @@ hostname = *.snow.me
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const ua = $request.headers["User-Agent"] || $request.headers["user-agent"];
 const times = Date.now();
 
@@ -29,7 +29,7 @@ const list = {
 
 for (const key of Object.keys(list)) {
   if (new RegExp(`^${key}`, "i").test(ua)) {
-    chxm1023.result = {
+    yahe1023.result = {
       "products": [
         {
           "managed": true,
@@ -50,9 +50,9 @@ for (const key of Object.keys(list)) {
       ],
       "activated": true
     };
-    console.log("已操作成功🎉🎉🎉\n叮当猫の分享频道: https://t.me/chxm1023");
+    console.log("已操作成功🎉🎉🎉\nYaHee, Studio.: https://yaheex.github.io");
     break;
   }
 }
 
-$done({ body: JSON.stringify(chxm1023) });
+$done({ body: JSON.stringify(yahe1023) });

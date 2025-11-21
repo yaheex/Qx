@@ -1,9 +1,9 @@
 /*************************************
 项目名称：WPS Office
 下载地址：https://t.cn/A6KOhd30
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -16,13 +16,13 @@ hostname = *.wps.cn
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const vip1 = '/list_purchase_info';
 const vip2 = '/overview';
 const flkj = '/spaces';
 
 if ($request.url.indexOf(vip1) != -1){
-chxm1023.data["merchandises"] = [
+yahe1023.data["merchandises"] = [
       {
         "sku_key" : "12",
         "expire_time" : 4092599349,
@@ -122,4 +122,4 @@ if ($request.url.indexOf(flkj) != -1){
   chxm1023["total"] = 1100585369600;
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(yahe1023)});

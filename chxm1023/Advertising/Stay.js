@@ -5,7 +5,7 @@
             
 [rewrite_local]
 
-^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Advertising/Stay.js
+^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/Stay.js
 
 [mitm]
 
@@ -13,8 +13,8 @@ hostname = api.shenyin.name
 
 ***********************************/
 
-let chxm1023 = JSON.parse($response.body);
-if (chxm1023.biz) {
-    chxm1023.biz = Object.values(chxm1023.biz).filter(item => !(item["type"]=="promoted"));
+let yahe1023 = JSON.parse($response.body);
+if (yahe1023.biz) {
+    yahe1023.biz = Object.values(yahe1023.biz).filter(item => !(item["type"]=="promoted"));
 }
-$done({ body: JSON.stringify(chxm1023) });
+$done({ body: JSON.stringify(yahe1023) });

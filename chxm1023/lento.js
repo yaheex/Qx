@@ -3,9 +3,9 @@
 项目名称：Lento-壁纸
 下载地址：https://t.cn/A6Yyzepk
 更新日期：2024-08-06
+脚本作者：YaHee,
 
-
-
+使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
 
@@ -17,10 +17,10 @@ hostname = lentoapp.com
 
 *************************************/
 
-var chxm1023 = JSON.parse($response.body);
+var yahe1023 = JSON.parse($response.body);
 const isQuanX = typeof $task !== "undefined";
 
-chxm1023 = {
+yahe1023 = {
   "meta" : {
     "message" : "获取作者信息成功",
     "code" : 200
@@ -31,4 +31,4 @@ chxm1023 = {
   }
 };
 
-$done({status: isQuanX ? "HTTP/1.1 200 OK" : 200, body: JSON.stringify(chxm1023)});
+$done({status: isQuanX ? "HTTP/1.1 200 OK" : 200, body: JSON.stringify(yahe1023)});
