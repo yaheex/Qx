@@ -12,7 +12,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/(nicegram\.cloud\/api\/v\d\/user\/info|restore-access\.indream\.app\/restoreAccess) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/nicegram.js
+^https?:\/\/(nicegram\.cloud\/api\/v\d\/user\/info|restore-access\.indream\.app\/restoreAccess) url script-response-body https://raw.githubusercontent.com/yaheex/Qx/refs/heads/main/chxm1023/Nicegram.js
 
 [mitm]
 hostname = nicegram.cloud, restore-access.indream.app
